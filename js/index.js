@@ -26,19 +26,6 @@ $(document).ready(function () {
     resize();
     displayPage(currentSection);
 
-    //Customization 
-    $('.pink-button').on({'click': function(){
-        $('#change-image').attr('src','https://vignette.wikia.nocookie.net/yoshi/images/6/68/Yoshi_rose.png/revision/latest?cb=20181128093639&path-prefix=fr');}
-    });
- 
-    $('.green-button').on({'click': function(){
-        $('#change-image').attr('src','https://upload.wikimedia.org/wikipedia/en/thumb/d/d9/YoshiMarioParty10.png/220px-YoshiMarioParty10.png');}
-    });
- 
-    $('.blue-button').on({'click': function(){
-        $('#change-image').attr('src','https://vignette.wikia.nocookie.net/yoshi/images/4/49/Yoshi_bleu_clair.png/revision/latest?cb=20181128093330&path-prefix=fr');}
-     });
-
 });
 
 // Switch section on key press
@@ -81,24 +68,3 @@ function displayPage(n) {
 function resize() {
     //Do stuff.
 }
-
-$(function() {
- $('.menulink').click(function(){
-   $("#bg").attr('src',"https://vignette.wikia.nocookie.net/yoshi/images/6/68/Yoshi_rose.png/revision/latest?cb=20181128093639&path-prefix=fr");
-   return false;
- });
-});
-
-$(function() {
- $('.menulinkvert').click(function(){
-   $("#bg").attr('src',"https://upload.wikimedia.org/wikipedia/en/thumb/d/d9/YoshiMarioParty10.png/220px-YoshiMarioParty10.png");
-   return false;
- });
-});
-
-$(function() {
- $('.menulinkbleu').click(function(){
-   $("#bg").attr('src',"https://vignette.wikia.nocookie.net/yoshi/images/4/49/Yoshi_bleu_clair.png/revision/latest?cb=20181128093330&path-prefix=fr");
-   return false;
- });
-});
