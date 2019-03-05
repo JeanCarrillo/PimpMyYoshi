@@ -1,6 +1,7 @@
 body {
     overflow: hidden;
     margin: 0 auto;
+    background-color: #000;
 }
 
 #maincontainer {
@@ -11,6 +12,11 @@ body {
     position: fixed;
     z-index: 10;
     width: 100%;
+    transition: all 800ms;
+}
+
+.navbar:hover {
+    opacity: 1;
 }
 
 #scroll {
@@ -49,10 +55,10 @@ body {
     width: 100%;
     opacity: 1;
     margin-top: 55px;
-    transition: all 800ms; 
+    transition: all 800ms;
 }
 
-.page h1 {
+.page #test {
     position: fixed;
     top: 50%;
 }

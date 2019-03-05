@@ -10,6 +10,10 @@ var section4 = document.getElementById('section4');
 sec4Canvas.width = window.innerWidth;
 sec4Canvas.height = window.innerHeight;
 
+// $.each(videoTuto, function(){
+//        this.controls = false; 
+// }); 
+
 //var hRatio = (sec4Canvas.width / videoTuto.videoWidth) * videoTuto.videoHeight;
 
 videoTuto.addEventListener('play', function () {
@@ -17,15 +21,25 @@ videoTuto.addEventListener('play', function () {
     (function loop() {
         if (!$this.paused && !$this.ended) {
 
+            $(".navbar").css("opacity", 0.5);
+            $(".videoDescription").css("opacity", 0);
             section4.style.backgroundColor = "#000"; //#222F3F
             sec4Canvas.style.opacity = 0.65;
             //ctx.drawImage($this, 0, 0);
             ctx.drawImage($this, 0, 0, sec4Canvas.width, sec4Canvas.width);
             setTimeout(loop, 1000 / 30); // drawing at 30fps
         }
+        if($this.paused){
+            $(".navbar").css("opacity", 1);
+            $(".videoDescription").css("opacity", 1);
+            section4.style.backgroundColor = "#e0f3ff";
+            sec4Canvas.style.opacity = 0;
+        }
         if($this.ended){
             section4.style.backgroundColor = "#e0f3ff";
             sec4Canvas.style.opacity = 0;
+            $(".videoDescription").css("opacity", 1);
+            $(".navbar").css("opacity", 1);
         }
     })();
 }, 0);
