@@ -1,3 +1,7 @@
+*{
+    pointer-events: auto;   
+}
+
 body {
     overflow: hidden;
     margin: 0 auto;
@@ -5,6 +9,7 @@ body {
 
 #maincontainer {
     padding: 0;
+    z-index: -10;
 }
 
 .navbar {
@@ -50,6 +55,8 @@ body {
     opacity: 0;
     margin-top: 55px;
     transition: opacity 800ms;
+    z-index: -10;
+    pointer-events:none;     
 }
 
 .page h1 {
