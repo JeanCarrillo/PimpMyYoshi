@@ -39,6 +39,6 @@ function displayPage(n) {
 }
 
 function resize() {
-    //Do stuff
+    //Do stuff.
 }
 
