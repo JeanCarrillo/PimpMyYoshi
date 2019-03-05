@@ -24,7 +24,7 @@ videoTuto.addEventListener('play', function () {
             setTimeout(loop, 1000 / 30); // drawing at 30fps
         }
         if($this.ended){
-            section4.style.backgroundColor = "#222F3F";
+            section4.style.backgroundColor = "#e0f3ff";
             sec4Canvas.style.opacity = 0;
         }
     })();
