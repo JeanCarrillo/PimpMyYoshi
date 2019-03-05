@@ -58,6 +58,9 @@ function displayPage(n) {
     $('.scroll_item').removeClass('scroll_item_active');
     $("#" + n).addClass('scroll_item_active');
 
+    $(".page").css("visibility", "hidden");
+    $("#section" + n).css("visibility", "visible");
+
     $(".page").css("opacity", 0);
     $("#section" + n).css("opacity", 1);
 
