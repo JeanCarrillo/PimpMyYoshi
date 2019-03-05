@@ -21,7 +21,6 @@ $(document).ready(function () {
 
     // Listen to key
     document.addEventListener("keydown", keyPressed);
-    document.addEventListener("keyup", keyReleased);
 
 
     resize();
@@ -63,7 +62,7 @@ function displayPage(n) {
     $("#section" + n).css("opacity", 1);
 
     console.log(n);
-}
+    }
 
 function resize() {
     //Do stuff.
