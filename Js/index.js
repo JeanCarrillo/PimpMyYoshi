@@ -18,19 +18,19 @@ $(document).ready(function () {
             }
         }
 
-        loadPage(currentSection);
+        displayPage(currentSection);
     });
 
     $('.scroll_item').click(function (event) {
 
-        loadPage($(this).attr('id'));
+        displayPage($(this).attr('id'));
     });
 
     resize();
-    loadPage(currentSection);
+    displayPage(currentSection);
 });
 
-function loadPage(n) {
+function displayPage(n) {
     $('.scroll_item').removeClass('scroll_item_active');
     $("#" + n).addClass('scroll_item_active');
 
