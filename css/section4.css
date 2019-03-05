@@ -12,6 +12,8 @@
     height: 100%;
     width: 100%;
     position: fixed;
+    opacity: 0;
     top: 0;
     filter: blur(50px);opacity: 0.5;
+    transition: all 800ms;
 }

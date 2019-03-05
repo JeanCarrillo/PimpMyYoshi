@@ -4,6 +4,7 @@
 var sec4Canvas = document.getElementById('section4Canvas');
 var ctx    = sec4Canvas.getContext('2d');
 var videoTuto  = document.getElementById('tutoVideo');
+var section4 = document.getElementById('section4');
 
 
 sec4Canvas.width = window.innerWidth;
@@ -16,9 +17,15 @@ videoTuto.addEventListener('play', function () {
     (function loop() {
         if (!$this.paused && !$this.ended) {
 
+            section4.style.backgroundColor = "#000"; //#222F3F
+            sec4Canvas.style.opacity = 0.65;
             //ctx.drawImage($this, 0, 0);
             ctx.drawImage($this, 0, 0, sec4Canvas.width, sec4Canvas.width);
             setTimeout(loop, 1000 / 30); // drawing at 30fps
+        }
+        if($this.ended){
+            section4.style.backgroundColor = "#222F3F";
+            sec4Canvas.style.opacity = 0;
         }
     })();
 }, 0);
