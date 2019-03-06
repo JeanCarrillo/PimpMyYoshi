@@ -5,6 +5,43 @@
     font-family: 'Fjalla One', sans-serif;
 }
 
+/* card */
+
+.card-custom-yoshi
+{
+    background-color: transparent;
+    border: transparent;
+    margin-top: 40%;
+}
+
+.card-body {
+	background-color: #755139;
+	 border-radius: 10px;
+}
+
+.card-text {
+	text-align: center;
+	color: white;
+
+}
+
+.card-text span {
+	font-size: 10px;
+}
+
+/* Button */
+.btn-dark{
+	color: white;
+	background-color: #755139;
+	border: none;
+	margin: 5px 50px 20px;
+	margin-left: 30%;
+}
+
+.btn-dark:hover { 
+	background: #D69C2F; 
+}
+
 /* compte a rebours */
 
 #clockdiv{
@@ -14,18 +51,20 @@
 	font-weight: 100;
 	text-align: center;
 	font-size: 18px;
-	margin: 10px 50px 20px;
+	margin: 5px 50px 20px;
+	margin-left: 25%;
+	margin-top: 60%;
 }
 
 #clockdiv > div{
-	padding: 10px;
+	padding: 5px;
 	border-radius: 3px;
 	color: #DD4132;
 	display: inline-block;
 }
 
 #clockdiv div > span{
-	padding: 15px;
+	padding: 10px;
 	border-radius: 3px;
 	color: #DD4132;
 
