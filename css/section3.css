@@ -1,4 +1,42 @@
+/* titre */
+
 .titlecolor {
     color: #6CB44C;
     font-family: 'Fjalla One', sans-serif;
+}
+
+/* compte a rebours */
+
+#clockdiv{
+
+	font-family: sans-serif;
+	color: #fff;
+	font-weight: 100;
+	text-align: center;
+	font-size: 18px;
+	margin: 10px 50px 20px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	color: #DD4132;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	color: #DD4132;
+
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+#clockdiv p{
+color: #DD4132;	
 }
