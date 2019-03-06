@@ -1,11 +1,16 @@
     
 $(document).ready(function () 
 {
-    color = 'green';
-    accessory = 'none';  
+    color = 'default';
+    accessory = 'none';
     //Customization 
     $('.green-button').on({'click': function()
     {
+        if (color=='default')
+        {
+            $('.green-button').removeAttr('id');
+        }
+        
         if (accessory=='none')
         {
             $('#change-image').attr('src','assets/images/yoshiVert.png');
@@ -24,6 +29,10 @@ $(document).ready(function ()
 
     $('.pink-button').on({'click': function()
     {
+        if (color=='default')
+        {
+            $('.green-button').removeAttr('id');
+        }
         if (accessory=='none')
         {
             $('#change-image').attr('src','assets/images/yoshiRose.png');
@@ -42,6 +51,10 @@ $(document).ready(function ()
 
     $('.blue-button').on({'click': function()
     {
+        if (color=='default')
+        {
+            $('.green-button').removeAttr('id');
+        }
         if (accessory=='none')
         {
             $('#change-image').attr('src','assets/images/yoshiBleu.png');
