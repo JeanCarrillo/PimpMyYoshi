@@ -1,6 +1,6 @@
 $("#section1").mousemove(function (e) {
-    parallaxIt(e, "#foreground  ", -100);
-    parallaxIt(e, "#background", -30);
+    parallaxIt(e, "#foreground  ", -35);
+    parallaxIt(e, "#background", -13);
 });
 
 function parallaxIt(e, target, movement) {
