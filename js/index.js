@@ -64,6 +64,12 @@ function displayPage(n) {
     $(".page").css("opacity", 0);
     $("#section" + n).css("opacity", 1);
 
+    if( n == 5){
+        $('iframe').css("visibility", "visible"); 
+    } else {
+        $('iframe').css("visibility", "hidden");
+    }
+
     console.log(n);
     }
 

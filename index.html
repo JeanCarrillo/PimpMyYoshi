@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -85,39 +85,59 @@
 
         </div>
     </div>
-    </div>
-    <!-- Section 2 -->
-    <div class="page" id="section2">
-        <div class="row justify-content-center">
-            <p>Debut</p>
-            <h1>Section No.2</h1>
-        </div>
-    </div>
-
-    <!-- Section 3 -->
-    <div class="page" id="section3">
-        <div class="row justify-content-center">
-            <div class="titlecolor">
-                <h1>Yoshi of the moth</h1>
-            </div>
-        </div>
-    </div>
 
     <!-- Section 4 TUTO-->
     <div class="page" id="section4">
         <div class="row justify-content-center">
-            <video src="assets/videos/amiibo.mp4" controls="true" width="280" height="160"></video>
+
+            <video poster="https://cdn.gamerant.com/wp-content/uploads/hard-to-find-amiibo-restock.jpg.optimal.jpg"
+                controls id="tutoVideo" width="1024" height="576">
+                <source src='assets/videos/amiibo.webm' type='video/webm; codecs="vp8.0, A_OPUS"' />
+                <source src="assets/videos/amiibo.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
+                <p>Can't load the tutorial</p>
+            </video>
+
+            <canvas id="section4Canvas"></canvas>
+        </div>
+
+        <div class="row justify-content-center videoDescription">
+            <div class="col-lg-6 text-center">
+                <h1>What is Amiibo ?</h1>
+            </div>
+
+        </div>
+    </div>
+
+        <div class="row justify-content-center videoDescription">
+            <div class="col-lg-6 text-center">
+                <p>Get cool in-game extras with amiibo accessories
+                    Just tap to score new characters, game modes, or other perks</p>
+            </div>
+
         </div>
     </div>
 
     <!-- Section 5 -->
     <div class="page" id="section5">
         <div class="row justify-content-center">
-            <p>Debut</p>
-            <h1>Section No.5</h1>
+            <!--debut -->
+            <h1 id="topc">Top custom</h1>
+            <div class="col-lg" id="tweet">
+                <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark"
+                    data-link-color="#E95F28" href="https://twitter.com/Bamby_president/lists/yoshi1">A Twitter List by
+                    TwitterDev</a>
+                <script async src="https://platform.twitter.com/widgets.js"></script>
+            </div>
+            <div class="col-lg" id="cardtop">
+                <img src="assets/images/topsecret.jpg" alt="topsecret" class="imgtop" id="img1"
+                    onclick="changeImages(event)">
+                <img src="assets/images/topsecret.jpg" alt="topsecret2" class="imgtop" id="img2"
+                    onclick="changeImages(event)">
+            </div>
         </div>
     </div>
     </div>
+
 
 
     <!-- Jquery - popper - bootstrap - customJs-->
