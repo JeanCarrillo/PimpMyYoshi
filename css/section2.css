@@ -2,11 +2,41 @@
 {
     background-color: transparent;
     border: transparent;
-    width: 75%;
+    width: 65%;
 }
+
+@media screen and (max-width: 768px) {
+    .card-custom-yoshi
+    {
+        background-color: transparent;
+        border: transparent;
+        width: 40%;
+    }
+    .body-custom-yoshi
+    {
+        display: none;
+    }
+    .button-custom-accessory p
+    {
+        display: none;
+    }
+    h2
+    {
+        font-size: 1.4em;
+    }
+    h3
+    {
+        font-size: 1.2em;
+    }
+}
+
 .card-custom-yoshi img
 {
     width: 100%;
+}
+.title-custom
+{
+    text-align: center;
 }
 
 .body-custom-yoshi
@@ -41,17 +71,36 @@
 {
     background-color: #f7530d;
     border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.3em;
+    border-radius: 10px;
 }
-
+.button-custom-accessory
+{
+    border:none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+.button-custom-accessory p
+    {
+        margin:0;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 .button-custom
 {
     border:none;
+    padding: 20px;
 }
-.button-custom:focus
+.button-custom:focus, .button-custom-accessory:focus
 {
     border:solid 2px grey;
 }
-.button-custom:active
+.button-custom:active, .button-custom-accessory:active
 {
     border:solid 2px grey;
 }
@@ -59,7 +108,22 @@
 {
     border:solid 2px grey;
 }
-.moustache:before
+#active-none
 {
-    content:url('assets/images/moustache.png');
+    border:solid 2px grey;
 }
+.nav-accessory img
+{
+    width: 60px;
+}
+#or
+{
+    font-size: 1.4em;
+}
+
+.zone-custom
+{
+    width: 100%;
+}
+
+
