@@ -1,21 +1,22 @@
-*{
-    pointer-events: auto;   
-}
-
 body {
     overflow: hidden;
     margin: 0 auto;
+    background-color: #000;
 }
 
 #maincontainer {
     padding: 0;
-    z-index: -10;
 }
 
 .navbar {
     position: fixed;
     z-index: 10;
     width: 100%;
+    transition: all 800ms;
+}
+
+.navbar:hover {
+    opacity: 1;
 }
 
 #scroll {
@@ -52,14 +53,12 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
+    opacity: 1;
     margin-top: 55px;
-    transition: opacity 800ms;
-    z-index: -10;
-    pointer-events:none;     
+    transition: all 800ms;
 }
 
-.page h1 {
+.page .titleTest {
     position: fixed;
     top: 50%;
 }
@@ -77,7 +76,7 @@ body {
 }
 
 #section4 {
-    background-color: #222F3F;
+    background-color: #e0f3ff;
 }
 
 #section5 {
