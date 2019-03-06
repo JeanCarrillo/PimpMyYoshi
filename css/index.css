@@ -58,7 +58,7 @@ body {
     transition: all 800ms;
 }
 
-.page #test {
+.page .titleTest {
     position: fixed;
     top: 50%;
 }
