@@ -26,7 +26,7 @@ videoTuto.addEventListener('play', function () {
             section4.style.backgroundColor = "#000"; //#222F3F
             sec4Canvas.style.opacity = 0.65;
             //ctx.drawImage($this, 0, 0);
-            ctx.drawImage($this, 0, 0, sec4Canvas.width, sec4Canvas.width);
+            ctx.drawImage($this, 0, 0, sec4Canvas.width, sec4Canvas.height);
             setTimeout(loop, 1000 / 30); // drawing at 30fps
         }
         if($this.paused){
