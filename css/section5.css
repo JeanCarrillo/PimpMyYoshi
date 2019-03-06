@@ -1,5 +1,11 @@
 #tweet {
   padding: 5%;
 }
-#topc {
-  
+.imgtop {
+  border-radius: 20%;
+  margin: 20px;
+}
+#cardtop {
+  padding-top: 10%;
+  padding-right: 5%;
+}
