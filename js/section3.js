@@ -1,5 +1,5 @@
 function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
+  var t = Date.parse(endtime) - Date.now();
   var seconds = Math.floor((t / 1000) % 60);
   var minutes = Math.floor((t / 1000 / 60) % 60);
   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -39,5 +39,5 @@ function initializeClock(id, endtime) {
 
 // choisir la date de fin du compte a rebours //
 
-var deadline = new Date(Date.parse(new Date()) + 22 * 24 * 60 * 60 * 1000);
+var deadline = new Date(Date.parse('2019-03-31'));
 initializeClock('clockdiv', deadline);

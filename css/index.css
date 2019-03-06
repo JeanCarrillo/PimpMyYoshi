@@ -15,10 +15,6 @@ body {
     transition: all 800ms;
 }
 
-.navbar:hover {
-    opacity: 1;
-}
-
 #scroll {
     position: fixed;
     top: 50%;
@@ -54,7 +50,6 @@ body {
     height: 100%;
     width: 100%;
     opacity: 1;
-    margin-top: 55px;
     transition: all 800ms;
 }
 
