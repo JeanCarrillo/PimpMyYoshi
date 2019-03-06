@@ -1,6 +1,13 @@
+
 .section1{
     background-image: url('../assets/images/section1_background2.png');
     background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+
+.section1{
+    background-color: #92D6D5;
     background-size: cover;
     height:100%;
 }
@@ -42,7 +49,16 @@
 .section1_card .card {
     background-color: transparent;
     border: solid;
+    z-index: 30000;
 }
+.section1_card img
+{
+    width:100%;
+    height: auto;
+}
+.section1_card .card-body {
+    color: black;
+border-radius: 0px;}
 @media screen and (max-width: 767px) {
     .section1_card {
       display:none;
