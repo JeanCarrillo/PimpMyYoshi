@@ -16,71 +16,69 @@
 }
 
 .card-text2 {
-	color: white;
-	font-family: 'Raleway', sans-serif;
-	padding: 5px;
-	font-size: 15px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  font-size: 15px;
 
 }
 
 .card-text2 span {
-	font-size: 10px;
-	font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Button */
 .btn-dark{
-	color: white;
-	background-color: #755139;
-	border: none;
-	margin: 5px 50px 20px;
-	margin-left: 10%;
-	font-family: 'Raleway', sans-serif;
-	font-size: 15px;
+  color: white;
+  background-color: #755139;
+  border: none;
+  margin: 5px 50px 20px;
+  margin-left: 10%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
 }
 
-.btn-dark:hover { 
-	background: #D69C2F; 
-}
+
 
 /* compte a rebours */
 
 #clockdiv{
 
-	font-family: 'Fjalla One', sans-serif;
-	color: #fff;
-	font-weight: 100;
-	text-align: center;
-	font-size: 12px;
-	
+  font-family: 'Fjalla One', sans-serif;
+  color: #fff;
+  font-weight: 100;
+  text-align: center;
+  font-size: 12px;
+  
 }
 
 #clockdiv > div{
-	padding: 5px;
-	border-radius: 3px;
-	color: #DD4132;
-	display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+  color: #DD4132;
+  display: inline-block;
 }
 
 #clockdiv div > span{
-	padding: 10px;
-	border-radius: 3px;
-	color: #DD4132;
-	display: inline-block;
+  padding: 10px;
+  border-radius: 3px;
+  color: #DD4132;
+  display: inline-block;
 }
 
 .smalltext{
-	padding-top: 5px;
-	font-size: 12px;
+  padding-top: 5px;
+  font-size: 12px;
 }
 
 .smalltexts{
-	padding-top: 5px;
-	font-size: 12px;
+  padding-top: 5px;
+  font-size: 12px;
 }
 
 #clockdiv p{
-color: #DD4132;	
+color: #DD4132; 
 }
 
 @media (max-width: 768px) {
@@ -90,9 +88,9 @@ color: #DD4132;
     }
 
 .card-month {
-	background-color: #755139;
-	 border-radius: 10px;
-	 width: 50%;
+  background-color: #755139;
+   border-radius: 10px;
+   width: 50%;
 }
 
 @media (max-width: 768px) {
@@ -131,8 +129,4 @@ color: #DD4132;
       }
     }
 
-@media (min-width: 768px) {
-      .smalltexts {
-        font-size: 18px;
-      }
-    }
+

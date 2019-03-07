@@ -1,11 +1,12 @@
+
 #tweet {
-  padding: 5%;
+  padding-left: 5%;
 }
-.imgtop {
-  border-radius: 20%;
-  margin: 20px;
+#topc {
+text-align: center;
 }
-#cardtop {
-  padding-top: 10%;
-  padding-right: 5%;
+@media (max-width: 767.98px) {
+  .twitter-timeline {
+    display: none;
+  }
 }
