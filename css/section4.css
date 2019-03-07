@@ -1,28 +1,27 @@
 /* SECTION 4 // 
 // Amiibo pres Tutotrial */
 
-#section4 video{     
-    display: block;  
+#section4 video {
+    display: block;
     margin: 5% auto;
-    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.75);
-    width: auto    !important;
-    height: 65%   !important;
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.75);
+    width: auto !important;
+    height: 65% !important;
     z-index: 50;
 }
 
-
-#videoPlayer{
+#videoPlayer {
     max-width: 75%;
     max-height: 70%;
-    z-index: 50;   
+    z-index: 50;
 }
 
-#videoDescription{
+#videoDescription {
     font-size: 120%;
     transition: all 1000ms;
 }
 
-.videoDescription{
+.videoDescription {
     text-align: center;
 }
 
@@ -32,6 +31,105 @@
     position: fixed;
     opacity: 0;
     top: 0;
-    filter: blur(50px);opacity: 0.5;
+    filter: blur(50px);
+    opacity: 0.5;
     transition: all 1200ms;
+}
+
+.ytplayer {
+    display: none;
+}
+
+#ytcontainer {
+    padding: 5%;
+}
+
+.question-box {
+    border: 1px solid #f5aa00;
+    border-radius: 7px;
+    position: relative;
+    margin-top: 45px;
+    padding-bottom: 1rem;
+}
+
+
+.question-box .question-header {
+    height: 1rem;
+    background-color: #f5aa00;
+    position: relative;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.question-box:after {
+    content: url('/assets/images/qmark.png');
+    width: 72px;
+    height: 72px;
+    top: -45px;
+    display: block;
+    position: absolute;
+    left: calc(50% - 56px);
+    padding: 20px;
+    box-sizing: initial;
+}
+
+.question-box .h3 {
+    font-size: 25px;
+    padding: 0 2rem;
+}
+
+.question-box.chosen .h3 {
+    font-family: 'LatoRegular';
+}
+
+p.h3 {
+    line-height: initial;
+}
+
+.question-box.chosen p, .question-box.chosen ol, .question-box.chosen li {
+    color: #000000;
+}
+
+.question-box.chosen .promo-frame a img {
+    border: 1px solid #000000;
+}
+
+.question-box p, .question-box ol, .question-box .row.padded-row {
+    padding: 0 2rem;
+}
+
+.question-box ol {
+    list-style: decimal;
+    list-style-position: outside;
+    margin-left: 1.5rem;
+}
+
+.question-box ol li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.question-box .row.padded-row p {
+    padding: 0 2rem 0 0;
+}
+
+.question-box img.full-image {
+    display: block;
+    margin: 1em auto;
+    max-width: 97%;
+}
+
+@media (max-width: 1280.98px) {
+    #videoPlayer {
+        display: none;
+    }
+    #section4Canvas {
+        display: none;
+    }
+    .ytplayer {
+        display: block;
+        z-index: 10;
+        visibility: visible;
+    }
 }
