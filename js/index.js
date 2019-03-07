@@ -25,6 +25,7 @@ $(document).ready(function () {
 
     resize();
     displayPage(currentSection);
+
 });
 
 // Switch section on key press
@@ -84,4 +85,3 @@ function displayPage(n) {
 function resize() {
     //Do stuff.
 }
-
