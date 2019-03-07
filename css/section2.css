@@ -1,25 +1,46 @@
 
+/* Style des titres */
+
+.custom-container h2 
+{
+    color: #de4a0b;
+}
+.custom-container h3 
+{
+    color: #77706c;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 0.7em;
+}
 
 /* Style de la card contenant le yoshi custom */
 .card-custom-yoshi
 {
     background-color: transparent;
     border: transparent;
-    width: 65%;
+    width: 80%;
 }
 
 .card-custom-yoshi img
 {
-    width: 100%;
+    width: 90%;
 }
-.title-custom
+.title-custom, .text-custom
 {
     text-align: center;
 }
-
+.title-custom
+{
+    font-weight: bold;
+    color: #77706c;
+    padding-bottom: 0.3em;
+    box-shadow: 0 4px 2px -2px #f3ecec;
+}
 .body-custom-yoshi
 {
     background-color: #fff;
+    border-radius: 10px;
+    border: solid 2px #f3ecec;
 }
 
 /* Style des boutons de custom */
@@ -91,25 +112,33 @@
 {
     background-color: #f7530d;
     border: none;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     font-size: 1.3em;
     border-radius: 10px;
+    font-weight: bold;
 }
-    
+
 .zone-custom
 {
     width: 100%;
 }
+/* Prices */
+.zone-prix
+{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.offer
+{
+    text-align: center;
+}
+.badge-warning
+{
+    background-color:#fef326;
+}
 
 
+/*Media queries */
 @media screen and (max-width: 768px) {
-    .card-custom-yoshi
-    {
-        width: 40%;
-    }
     .body-custom-yoshi
     {
         display: none;
@@ -118,16 +147,24 @@
     {
         display: none;
     }
-    h2
+    h2 
     {
         font-size: 1.4em;
     }
-    h3
+    .custom-container h3 
     {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
 }
+
+@media screen and (max-width: 992px) {
+    .card-custom-yoshi
+    {
+        width: 40%;
+    } 
+}
+
 @media screen and (max-width: 576px) {
     .custom-container
         {

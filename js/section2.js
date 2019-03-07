@@ -13,20 +13,20 @@ $(document).ready(function ()
         if (accessory=='none')
         {
             $('#change-image').attr('src','assets/images/yoshiVert.png');
-            $('.title-custom').text('Classic Yoshi');
+            $('.title-custom').text('Green Yoshi');
             $('.text-custom').text('The orignal green Yoshi for purists.');
         }
         else if (accessory=='moustache')
         {
             $('#change-image').attr('src','assets/images/yoshiVertMoustache.png');
-            $('.title-custom').text('Classic Yoshi with moustache');
-            $('.text-custom').text('The orignal green Yoshi for purists.');
+            $('.title-custom').text('Green Yoshi with Mario\'s hat');
+            $('.text-custom').text('Yoshi dressed as his best friend.');
         }
         else if (accessory=='sunglasses')
         {
             $('#change-image').attr('src','assets/images/yoshiVertLunettes.png');
-            $('.title-custom').text('Classic Yoshi with sunglasses');
-            $('.text-custom').text('The orignal green Yoshi for purists.');
+            $('.title-custom').text('Green Yoshi with sunglasses');
+            $('.text-custom').text('Yoshi with his coolest look.');
         }
         color = 'green';
     }
@@ -41,19 +41,19 @@ $(document).ready(function ()
         {
             $('#change-image').attr('src','assets/images/yoshiRose.png');
             $('.title-custom').text('Pink Yoshi');
-            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
+            $('.text-custom').text('The pink Yoshi for candy floss lovers.');
         }
         else if (accessory=='moustache')
         {
             $('#change-image').attr('src','assets/images/yoshiRoseMoustache.png');
-            $('.title-custom').text('Pink Yoshi with moustache');
-            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
+            $('.title-custom').text('Pink Yoshi with Mario\'s hat');
+            $('.text-custom').text('Yoshi dressed as his best friend.');
         }
         else if (accessory=='sunglasses')
         {
             $('#change-image').attr('src','assets/images/yoshiRoseLunettes.png');
             $('.title-custom').text('Pink Yoshi with sunglasses');
-            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
+            $('.text-custom').text('Yoshi with his coolest look.');
         }
         color = 'pink';
     }
@@ -73,14 +73,14 @@ $(document).ready(function ()
         else if (accessory=='moustache')
         {
             $('#change-image').attr('src','assets/images/yoshiBleuMoustache.png');
-            $('.title-custom').text('Blue Yoshi with moustache');
-            $('.text-custom').text('The blue Yoshi for dreamers.');
+            $('.title-custom').text('Blue Yoshi with Mario\'s hat');
+            $('.text-custom').text('Yoshi dressed as his best friend.');
         }
         else if (accessory=='sunglasses')
         {
             $('#change-image').attr('src','assets/images/yoshiBleuLunettes.png');
             $('.title-custom').text('Blue Yoshi with sunglasses');
-            $('.text-custom').text('The blue Yoshi for dreamers.');
+            $('.text-custom').text('Yoshi with his coolest look.');
         }
         color = 'blue';
     }
@@ -99,19 +99,19 @@ $(document).ready(function ()
         if (color == 'green')
         {
             $('#change-image').attr('src','assets/images/yoshiVertMoustache.png');
-            $('.title-custom').text('Classic Yoshi with moustache');
-            $('.text-custom').text('The orignal green Yoshi for purists.');    
+            $('.title-custom').text('Green Yoshi with Mario\'s hat');
+            $('.text-custom').text('Yoshi dressed as his best friend.');    
         }
         else if (color == 'pink')
         {
             $('#change-image').attr('src','assets/images/yoshiRoseMoustache.png');
-            $('.title-custom').text('Pink Yoshi with moustache');
-            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
+            $('.title-custom').text('Pink Yoshi with Mario\'s hat');
+            $('.text-custom').text('The pink Yoshi for candy floss lovers.');
         }
         else if (color == 'blue')
         {
             $('#change-image').attr('src','assets/images/yoshiBleuMoustache.png');
-            $('.title-custom').text('Blue Yoshi with moustache');
+            $('.title-custom').text('Blue Yoshi with Mario\'s hat');
             $('.text-custom').text('The blue Yoshi for dreamers.');
         }
         accessory = 'moustache';
@@ -131,14 +131,14 @@ $(document).ready(function ()
         if (color == 'green')
         {
             $('#change-image').attr('src','assets/images/yoshiVert.png');
-            $('.title-custom').text('Classic Yoshi');
+            $('.title-custom').text('Green Yoshi');
             $('.text-custom').text('The orignal green Yoshi for purists.');    
         }
         else if (color == 'pink')
         {
             $('#change-image').attr('src','assets/images/yoshiRose.png');
             $('.title-custom').text('Pink Yoshi');
-            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
+            $('.text-custom').text('The pink Yoshi for candy floss lovers.');
         }
         else if (color == 'blue')
         {
@@ -147,6 +147,7 @@ $(document).ready(function ()
             $('.text-custom').text('The blue Yoshi for dreamers.');
         }
         accessory = 'none';
+        price = 'base';
     }
 });
     $('.sunglasses').on({'click': function()
@@ -161,20 +162,20 @@ $(document).ready(function ()
         if (color == 'green')
         {
             $('#change-image').attr('src','assets/images/yoshiVertLunettes.png');
-            $('.title-custom').text('Classic Yoshi with sunglasses');
-            $('.text-custom').text('The orignal green Yoshi for purists.');    
+            $('.title-custom').text('Green Yoshi with sunglasses');
+            $('.text-custom').text('Yoshi with his coolest look.');    
         }
         else if (color == 'pink')
         {
             $('#change-image').attr('src','assets/images/yoshiRoseLunettes.png');
             $('.title-custom').text('Pink Yoshi with sunglasses');
-            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
+            $('.text-custom').text('Yoshi with his coolest look.');
         }
         else if (color == 'blue')
         {
             $('#change-image').attr('src','assets/images/yoshiBleuLunettes.png');
             $('.title-custom').text('Blue Yoshi with sunglasses');
-            $('.text-custom').text('The blue Yoshi for dreamers.');
+            $('.text-custom').text('Yoshi with his coolest look.');
         }
         accessory = 'sunglasses';
         price = 'expensive';

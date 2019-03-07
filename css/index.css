@@ -6,6 +6,30 @@ body {
     overflow: hidden;
     margin: 0 auto;
     background-color: #000;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1
+{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.7em;
+    font-weight: bold;
+}
+h2
+{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.7em;
+    font-weight: bold;
+}
+
+a
+{
+    color: #de4a0b;
+}
+
+a:hover
+{
+    color: #b13c0a;
 }
 
 #maincontainer {
