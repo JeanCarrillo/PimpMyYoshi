@@ -1,0 +1,133 @@
+.card-custom-yoshi
+{
+    background-color: transparent;
+    border: transparent;
+    width: 65%;
+}
+
+@media screen and (max-width: 768px) {
+    .card-custom-yoshi
+    {
+        background-color: transparent;
+        border: transparent;
+        width: 38%;
+    }
+    .body-custom-yoshi
+    {
+        display: none;
+    }
+    .button-custom-accessory p
+    {
+        display: none;
+    }
+    h2
+    {
+        font-size: 1.4em;
+    }
+    h3
+    {
+        font-size: 1.2em;
+    }
+    .custom-container
+    {
+    margin-top: 50vh; 
+    transform: translateY(-50%); 
+    }
+
+}
+
+.card-custom-yoshi img
+{
+    width: 100%;
+}
+.title-custom
+{
+    text-align: center;
+}
+
+.body-custom-yoshi
+{
+    background-color: #fff;
+}
+
+.green-button
+{
+    background-color: #72ec5f;
+}
+
+.pink-button
+{
+    background-color: #ff8daf;
+}
+
+.blue-button
+{
+    background-color: #54d1e2;
+}
+
+.button-buy:active
+{
+    background-color: #ff8f5f;
+}
+.button-buy:hover
+{
+    background-color: #ff8f5f;
+}
+.button-buy
+{
+    background-color: #f7530d;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.3em;
+    border-radius: 10px;
+}
+.button-custom-accessory
+{
+    border:none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+.button-custom-accessory p
+    {
+        margin:0;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+.button-custom
+{
+    border:none;
+    padding: 20px;
+}
+.button-custom:focus, .button-custom-accessory:focus
+{
+    border:solid 2px grey;
+}
+.button-custom:active, .button-custom-accessory:active
+{
+    border:solid 2px grey;
+}
+#active
+{
+    border:solid 2px grey;
+}
+#active-none
+{
+    border:solid 2px grey;
+}
+.nav-accessory img
+{
+    width: 50px;
+}
+#or
+{
+    font-size: 1.4em;
+}
+
+.zone-custom
+{
+    width: 100%;
+}

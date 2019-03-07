@@ -25,30 +25,6 @@
         <div id="5" class="scroll_item">&nbsp;</div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
     <!-- Main container -->
     <div class="container-fluid" id="maincontainer">
@@ -91,13 +67,68 @@
         </div>
 
 
+
         <!-- Section 2 -->
         <div class="page" id="section2">
-            <div class="row justify-content-center">
-                <p>Debut</p>
-                <h1 class="titleTest">Section No.2</h1>
+            <div class="custom-container mt-md-5">
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <h2>Customize your Yoshi amiibo</h2>
+                    </div>
+                </div>
+                <!-- Zone de customization -->
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-4 order-lg-2 order-sm-1 order-sx-1">
+                        <!-- Choix couleurs -->
+                        <div class="zone-custom text-center pb-lg-5 pb-sm-4 pb-4">
+                            <h3 class="text-center">Choose your color</h3>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item mr-5"><button id="active"
+                                        class="btn green-button button-custom"></button></li>
+                                <li class="nav-item mr-5"><button class="btn pink-button button-custom"></button></li>
+                                <li class="nav-item"><button class="btn blue-button button-custom"></button></li>
+                            </ul>
+                        </div>
+                        <!-- Choix accessoires -->
+                        <div class="zone-custom text-center pb-lg-5 pb-sm-3 pb-2">
+                            <h3 class="text-center">Choose your accessory</h3>
+                            <ul class="nav justify-content-center nav-accessory">
+                                <li class="nav-item mr-5"><button type="button"
+                                        class="btn none btn-light button-custom-accessory" id="active-none"><img
+                                            class="img-button" src="assets/images/cross.png" alt="cross" />
+                                        <p>None</p>
+                                    </button></li>
+                                <li class="nav-item item-moustache mr-5"><button type="button"
+                                        class="btn moustache btn-light button-custom-accessory"><img class="img-button"
+                                            src="assets/images/moustache.png" alt="moustache" />
+                                        <p>Mario</p>
+                                    </button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Image et texte du Yoshi personnalisé -->
+                    <div class="col-12 col-md-8 col-lg-3 order-lg-1 order-sm-2 order-sx-2 justify-content-center">
+                        <div class="card card-custom-yoshi m-auto">
+                            <img id="change-image" src="assets/images/yoshiVert.png" alt="Classic Yoshi"
+                                class="card-img-top py-2">
+                            <div class="body-custom-yoshi card-body">
+                                <h5 class="card-title title-custom">Classic Yoshi</h5>
+                                <p class="card-text text-custom">The orignal green Yoshi for purists</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Boutons achat -->
+                <div class="row justify-content-center mt-2 mt-sm-2 mt-md-5 mb-4 mb-sm-4 mb-md-5">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <button type="button" class="btn-light button-buy text-white">Buy your amiibo</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
 
         <!-- Section 3 Yoshi of the month -->
         <div class="page" id="section3">
@@ -111,7 +142,7 @@
                         <img class="card-img-top" src="assets/IndianYoshi.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">Unlock your Indian Yoshi and impress your friends in
-                                game!!</br><span>available
+                                game!!<br><span>available
                                     only in March</span></p>
                         </div>
                     </div>
@@ -148,55 +179,64 @@
             </div>
             <button type="button" class="btn btn-dark">Get our exclusive Indian Yoshi</button>
         </div>
-        <button type="button" class="btn btn-dark">Get our exclusive Indian Yoshi</button>
 
-    </div>
 
-    <!-- Section 4 TUTO-->
-    <div class="page" id="section4">
-        <div class="row justify-content-center">
 
-            <div id="videoPlayer">
-                <video poster="https://cdn.gamerant.com/wp-content/uploads/hard-to-find-amiibo-restock.jpg.optimal.jpg"
-                    controls id="tutoVideo" width="1024" height="576">
-                    <source src='assets/videos/amiibo.webm' type='video/webm; codecs="vp8.0, A_OPUS"' />
-                    <source src="assets/videos/amiibo.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
-                    <p>Can't load the tutorial</p>
-                </video>
+        <!-- Section 4 TUTO-->
+        <div class="page" id="section4">
+            <div class="row justify-content-center">
 
-                <h1 class="videoDescription">What is Amiibo ?</h1>
-                <p class="videoDescription">Get cool in-game extras with amiibo accessories
-                    Just tap to score new characters, game modes, or other perks</p>
+                <div id="videoPlayer">
+                    <video
+                        poster="https://cdn.gamerant.com/wp-content/uploads/hard-to-find-amiibo-restock.jpg.optimal.jpg"
+                        controls id="tutoVideo" width="1024" height="576">
+                        <source src='assets/videos/amiibo.webm' type='video/webm; codecs="vp8.0, A_OPUS"' />
+                        <source src="assets/videos/amiibo.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
+                        <p>Can't load the tutorial</p>
+                    </video>
 
+                    <h1 class="videoDescription">What is Amiibo ?</h1>
+                    <p class="videoDescription">Get cool in-game extras with amiibo accessories
+                        Just tap to score new characters, game modes, or other perks</p>
+
+                </div>
             </div>
+
+            <canvas id="section4Canvas"></canvas>
         </div>
 
-        <canvas id="section4Canvas"></canvas>
-    </div>
+        <!-- Section 5 -->
+        <div class="page" id="section5">
+            <h1 id="topc">Top custom</h1>
+            <div class="row d-flex align-items-center">
+                <!--debut -->
 
-    <!-- Section 5 -->
-    <div class="page" id="section5">
-        <h1 id="topc">Top custom</h1>
-        <div class="row d-flex align-items-center">
-
-            <!--debut -->
-
-            <div class="col-sm-4" id="tweet">
-                <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark"
-                    data-link-color="#E95F28" href="https://twitter.com/Bamby_president/lists/yoshi1">A Twitter List by
-                    TwitterDev</a>
-                <script async src="https://platform.twitter.com/widgets.js"></script>
-            </div>
-            <div class="col-sm-4">
-                <img src="assets/images/yoshioeuf.png" alt="topsecret" class="imgtop" id="img1"
-                    onclick="changeImages(event)">
-            </div>
-            <div class="col-sm-4">
-                <img src="assets/images/yoshioeuf.png" alt="topsecret2" class="imgtop" id="img2"
-                    onclick="changeImages(event)">
+                <div class="col-sm-4" id="tweet">
+                    <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark"
+                        data-link-color="#E95F28" href="https://twitter.com/Bamby_president/lists/yoshi1">A Twitter List
+                        by
+                        TwitterDev</a>
+                    <script async src="https://platform.twitter.com/widgets.js"></script>
+                </div>
+                <div class="col-sm-2">
+                    <img src="assets/images/yoshioeuf.png" alt="topsecret" class="imgtop" id="img1"
+                        onclick="changeImages(event)">
+                </div>
+                <div class="col-sm-2">
+                    <img src="assets/images/yoshioeuf.png" alt="topsecret2" class="imgtop" id="img2"
+                        onclick="changeImages(event)">
+                </div>
+                <div class="col-sm-2">
+                    <img src="assets/images/yoshioeuf.png" alt="topsecret3" class="imgtop" id="img3"
+                        onclick="changeImages(event)">
+                </div>
             </div>
         </div>
+        <!--Fin container -->
     </div>
+
+
+
 
 
 
