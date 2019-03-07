@@ -1,32 +1,31 @@
 /* titre */
-
-.titlecolor {
-    color: #6CB44C;
+.texte-section3 {
+    color: #755139;
     font-family: 'Fjalla One', sans-serif;
+    margin-top: 10px;
 }
 
 /* card */
 
-.card-custom-yoshi
+.card-custom-yoshi2
 {
     background-color: transparent;
     border: transparent;
-    margin-top: 40%;
+    text-align: center;
+    
 }
 
-.card-body {
-	background-color: #755139;
-	 border-radius: 10px;
-}
-
-.card-text {
-	text-align: center;
+.card-text2 {
 	color: white;
+	font-family: 'Raleway', sans-serif;
+	padding: 5px;
+	font-size: 15px;
 
 }
 
-.card-text span {
+.card-text2 span {
 	font-size: 10px;
+	font-family: 'Raleway', sans-serif;
 }
 
 /* Button */
@@ -35,7 +34,9 @@
 	background-color: #755139;
 	border: none;
 	margin: 5px 50px 20px;
-	margin-left: 30%;
+	margin-left: 10%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
 }
 
 .btn-dark:hover { 
@@ -46,14 +47,12 @@
 
 #clockdiv{
 
-	font-family: sans-serif;
+	font-family: 'Fjalla One', sans-serif;
 	color: #fff;
 	font-weight: 100;
 	text-align: center;
-	font-size: 18px;
-	margin: 5px 50px 20px;
-	margin-left: 25%;
-	margin-top: 60%;
+	font-size: 12px;
+	
 }
 
 #clockdiv > div{
@@ -67,7 +66,6 @@
 	padding: 10px;
 	border-radius: 3px;
 	color: #DD4132;
-
 	display: inline-block;
 }
 
@@ -76,6 +74,65 @@
 	font-size: 12px;
 }
 
+.smalltexts{
+	padding-top: 5px;
+	font-size: 12px;
+}
+
 #clockdiv p{
 color: #DD4132;	
 }
+
+@media (max-width: 768px) {
+      .card-img-top {
+        width: 70%;
+      }
+    }
+
+.card-month {
+	background-color: #755139;
+	 border-radius: 10px;
+	 width: 50%;
+}
+
+@media (max-width: 768px) {
+      .card-month {
+        width: 50%;
+      }
+    }
+
+@media (min-width: 768px) {
+      .card-text {
+        font-size: 18px;
+      }
+    }
+
+@media (min-width: 768px) {
+      .card-custom-yoshi2 {
+        display: inline-block;
+      }
+    }
+
+@media (min-width: 768px) {
+      .btn-dark {
+        font-size: 18px;
+      }
+    }
+
+@media (min-width: 768px) {
+      #clockdiv {
+        font-size: 20px;
+      }
+    }
+
+@media (min-width: 768px) {
+      .smalltext {
+        font-size: 18px;
+      }
+    }
+
+@media (min-width: 768px) {
+      .smalltexts {
+        font-size: 18px;
+      }
+    }
