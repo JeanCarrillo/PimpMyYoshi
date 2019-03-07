@@ -39,5 +39,7 @@ function initializeClock(id, endtime) {
 
 // choisir la date de fin du compte a rebours //
 
+
 var deadline = new Date(Date.parse('2019-03-31'));
 initializeClock('clockdiv', deadline);
+
