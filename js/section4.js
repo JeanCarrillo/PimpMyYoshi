@@ -21,7 +21,7 @@ videoTuto.addEventListener('play', function () {
     (function loop() {
         if (!$this.paused && !$this.ended) {
 
-            $(".navbar").css("opacity", 0.5);
+            //$(".navbar").css("opacity", 0.5);
             $(".videoDescription").css("opacity", 0);
             section4.style.backgroundColor = "#000"; //#222F3F
             sec4Canvas.style.opacity = 0.65;
@@ -30,7 +30,7 @@ videoTuto.addEventListener('play', function () {
             setTimeout(loop, 1000 / 30); // drawing at 30fps
         }
         if($this.paused){
-            $(".navbar").css("opacity", 1);
+            //$(".navbar").css("opacity", 1);
             $(".videoDescription").css("opacity", 1);
             section4.style.backgroundColor = "#e0f3ff";
             sec4Canvas.style.opacity = 0;
@@ -39,7 +39,7 @@ videoTuto.addEventListener('play', function () {
             section4.style.backgroundColor = "#e0f3ff";
             sec4Canvas.style.opacity = 0;
             $(".videoDescription").css("opacity", 1);
-            $(".navbar").css("opacity", 1);
+            //$(".navbar").css("opacity", 1);
         }
     })();
 }, 0);
