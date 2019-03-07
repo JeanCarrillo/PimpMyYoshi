@@ -3,6 +3,7 @@ $(document).ready(function ()
 {
     color = 'green';
     accessory = 'none';
+    price = 'base';
     //Customization 
     $('.green-button').on({'click': function()
     {
@@ -19,6 +20,12 @@ $(document).ready(function ()
         {
             $('#change-image').attr('src','assets/images/yoshiVertMoustache.png');
             $('.title-custom').text('Classic Yoshi with moustache');
+            $('.text-custom').text('The orignal green Yoshi for purists.');
+        }
+        else if (accessory=='sunglasses')
+        {
+            $('#change-image').attr('src','assets/images/yoshiVertLunettes.png');
+            $('.title-custom').text('Classic Yoshi with sunglasses');
             $('.text-custom').text('The orignal green Yoshi for purists.');
         }
         color = 'green';
@@ -42,6 +49,12 @@ $(document).ready(function ()
             $('.title-custom').text('Pink Yoshi with moustache');
             $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
         }
+        else if (accessory=='sunglasses')
+        {
+            $('#change-image').attr('src','assets/images/yoshiRoseLunettes.png');
+            $('.title-custom').text('Pink Yoshi with sunglasses');
+            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
+        }
         color = 'pink';
     }
 });
@@ -63,6 +76,12 @@ $(document).ready(function ()
             $('.title-custom').text('Blue Yoshi with moustache');
             $('.text-custom').text('The blue Yoshi for dreamers.');
         }
+        else if (accessory=='sunglasses')
+        {
+            $('#change-image').attr('src','assets/images/yoshiBleuLunettes.png');
+            $('.title-custom').text('Blue Yoshi with sunglasses');
+            $('.text-custom').text('The blue Yoshi for dreamers.');
+        }
         color = 'blue';
     }
 });
@@ -71,6 +90,11 @@ $(document).ready(function ()
     {
         $('#active-none').removeAttr('id');
         $('.moustache').attr('id', 'active-none');
+
+        if (price == 'base')
+        {
+            $('.price').text('40€');
+        }
 
         if (color == 'green')
         {
@@ -91,12 +115,18 @@ $(document).ready(function ()
             $('.text-custom').text('The blue Yoshi for dreamers.');
         }
         accessory = 'moustache';
+        price = 'expensive';
     }
 });
     $('.none').on({'click': function()
     {
         $('#active-none').removeAttr('id');
         $('.none').attr('id', 'active-none');
+
+        if (price == 'expensive')
+        {
+            $('.price').text('30€');
+        }
 
         if (color == 'green')
         {
@@ -117,6 +147,37 @@ $(document).ready(function ()
             $('.text-custom').text('The blue Yoshi for dreamers.');
         }
         accessory = 'none';
+    }
+});
+    $('.sunglasses').on({'click': function()
+    {
+        $('#active-none').removeAttr('id');
+        $('.sunglasses').attr('id', 'active-none');
+
+        if (price == 'base')
+        {
+            $('.price').text('40€');
+        }
+        if (color == 'green')
+        {
+            $('#change-image').attr('src','assets/images/yoshiVertLunettes.png');
+            $('.title-custom').text('Classic Yoshi with sunglasses');
+            $('.text-custom').text('The orignal green Yoshi for purists.');    
+        }
+        else if (color == 'pink')
+        {
+            $('#change-image').attr('src','assets/images/yoshiRoseLunettes.png');
+            $('.title-custom').text('Pink Yoshi with sunglasses');
+            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
+        }
+        else if (color == 'blue')
+        {
+            $('#change-image').attr('src','assets/images/yoshiBleuLunettes.png');
+            $('.title-custom').text('Blue Yoshi with sunglasses');
+            $('.text-custom').text('The blue Yoshi for dreamers.');
+        }
+        accessory = 'sunglasses';
+        price = 'expensive';
     }
 });
 
