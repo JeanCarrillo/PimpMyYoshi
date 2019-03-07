@@ -71,6 +71,12 @@ function displayPage(n) {
         $('iframe').css("visibility", "hidden");
     }
 
+    if( n == 4){
+        $('.ytplayer').css("visibility", "visible"); 
+    } else {
+        $('.ytplayer').css("visibility", "hidden");
+    }
+
     // if( n == 1){
     //     $(".navbar" + n).css("opacity", 1);
     //     $('.navbar').css("visibility", "visible"); 
