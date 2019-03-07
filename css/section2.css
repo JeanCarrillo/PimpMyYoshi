@@ -10,7 +10,7 @@
     {
         background-color: transparent;
         border: transparent;
-        width: 40%;
+        width: 38%;
     }
     .body-custom-yoshi
     {
@@ -28,6 +28,12 @@
     {
         font-size: 1.2em;
     }
+    .custom-container
+    {
+    margin-top: 50vh; 
+    transform: translateY(-50%); 
+    }
+
 }
 
 .card-custom-yoshi img
@@ -114,7 +120,7 @@
 }
 .nav-accessory img
 {
-    width: 60px;
+    width: 50px;
 }
 #or
 {
@@ -125,5 +131,3 @@
 {
     width: 100%;
 }
-
-

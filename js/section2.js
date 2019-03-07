@@ -1,21 +1,13 @@
     
 $(document).ready(function () 
 {
-    color = 'default';
-    accessory = 'default';
+    color = 'green';
+    accessory = 'none';
     //Customization 
     $('.green-button').on({'click': function()
     {
-        if (color=='default')
-        {
-            $('.green-button').removeAttr('id');
-        }
-        if (accessory=='default')
-        {
-            $('#change-image').attr('src','assets/images/yoshiVert.png');
-            $('.title-custom').text('Classic Yoshi');
-            $('.text-custom').text('The orignal green Yoshi for purists.');
-        }
+        $('#active').removeAttr('id');
+        $('.green-button').attr('id', 'active');
         
         if (accessory=='none')
         {
@@ -35,16 +27,9 @@ $(document).ready(function ()
 
     $('.pink-button').on({'click': function()
     {
-        if (color=='default')
-        {
-            $('.green-button').removeAttr('id');
-        }
-        if (accessory=='default')
-        {
-            $('#change-image').attr('src','assets/images/yoshiRose.png');
-            $('.title-custom').text('Pink Yoshi');
-            $('.text-custom').text('The sweet pink Yoshi for candy floss lovers.');
-        }
+        $('#active').removeAttr('id');
+        $('.pink-button').attr('id', 'active');
+
         if (accessory=='none')
         {
             $('#change-image').attr('src','assets/images/yoshiRose.png');
@@ -63,16 +48,9 @@ $(document).ready(function ()
 
     $('.blue-button').on({'click': function()
     {
-        if (color=='default')
-        {
-            $('.green-button').removeAttr('id');
-        }
-        if (accessory=='default')
-        {
-            $('#change-image').attr('src','assets/images/yoshiBleu.png');
-            $('.title-custom').text('Blue Yoshi');
-            $('.text-custom').text('The blue Yoshi for dreamers.');
-        }
+        $('#active').removeAttr('id');
+        $('.blue-button').attr('id', 'active');
+
         if (accessory=='none')
         {
             $('#change-image').attr('src','assets/images/yoshiBleu.png');
@@ -91,16 +69,9 @@ $(document).ready(function ()
 
     $('.moustache').on({'click': function()
     {
-        if (accessory=='default')
-        {
-            $('.none').removeAttr('id');
-        }
-        if (color == 'default')
-        {
-            $('#change-image').attr('src','assets/images/yoshiVertMoustache.png');
-            $('.title-custom').text('Classic Yoshi with moustache');
-            $('.text-custom').text('The orignal green Yoshi for purists.');    
-        }
+        $('#active-none').removeAttr('id');
+        $('.moustache').attr('id', 'active-none');
+
         if (color == 'green')
         {
             $('#change-image').attr('src','assets/images/yoshiVertMoustache.png');
@@ -124,17 +95,9 @@ $(document).ready(function ()
 });
     $('.none').on({'click': function()
     {
-        if (accessory=='default')
-        {
-            $('.none').removeAttr('id');
-        }
+        $('#active-none').removeAttr('id');
+        $('.none').attr('id', 'active-none');
 
-        if (color == 'default')
-        {
-            $('#change-image').attr('src','assets/images/yoshiVert.png');
-            $('.title-custom').text('Classic Yoshi');
-            $('.text-custom').text('The orignal green Yoshi for purists.');    
-        }
         if (color == 'green')
         {
             $('#change-image').attr('src','assets/images/yoshiVert.png');
