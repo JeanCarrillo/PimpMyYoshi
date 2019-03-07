@@ -31,7 +31,7 @@
         <!-- Section 1 -->
         <div class="page" id="section1">
             <div class="container-fluid section1">
-                <img src="assets/images/pimpmyyoshi.png" alt="Pimp My Yoshi" class="logo">
+                <img src="assets/images/pimpmyyoshi2.png" alt="Pimp My Yoshi" class="logo">
 
 
 
@@ -64,7 +64,7 @@
                                 <div class="card">
                                     <img class="card-img-top" src="assets/images/IndianYoshi.png" alt="Indian Yoshi">
                                     <div class="card-body">
-                                        <p class="card-text">Our monthly Yoshi</p>
+                                        <p class="card-text card-slider">Our monthly Yoshi</p>
                                     </div>
                                 </div>
                             </a>
@@ -73,7 +73,7 @@
 
                     </div>
                 </div>
-                <p class="section1_text">Customize your Amiibo and bring him in exciting adventures!</p>
+                <p class="section1_text"><a onclick="displayPage(2)"><span class="text-slider">Customize your Amiibo and bring him in exciting adventures!</span></a></p>
                 <img src="assets/images/bg2-new.png" alt="Landscape" class="section1_background1" id="foreground">
                 <div id="background"></div>
 
@@ -118,18 +118,19 @@
                         <div class="card card-custom-yoshi m-auto">
                             <img id="change-image" src="assets/images/yoshiVert.png" alt="Classic Yoshi" class="card-img-top py-2">
                             <div class="body-custom-yoshi card-body">
-                                <h5 class="card-title title-custom">Classic Yoshi</h5>
+                                <h4 class="card-title title-custom">Green Yoshi</h4>
                                 <p class="card-text text-custom">The orignal green Yoshi for purists</p>
                             </div>
                         </div>
-                        <p class="text-center mt-2">Price: <span class="price">30€</span></p>
+                        <p class="text-center mt-2 zone-prix">Price: <span class="price">30€</span></p>
+                        <p class="offer"><span class="badge-pill badge-warning p-2">20% off</span> if you <a href="https://www.amazon.fr/Yoshis-Woolly-World-Amiibo-Yoshi/dp/B00VK5P2XO/ref=sr_1_11?s=videogames&ie=UTF8&qid=1551986701&sr=1-11&keywords=amiibo+yoshi+game">buy it with the game</a></p>
                     </div>
                 </div>
                 <!-- Boutons achat -->
-                <div class="row justify-content-center mt-2 mt-sm-2 mt-md-4 mb-4 mb-sm-4 mb-md-5">
-                    <div class="col-8 col-md-5 p-md-4 zone-buy">
+                <div class="row justify-content-center mb-4 mb-sm-4 mb-md-5">
+                    <div class="col-8 col-md-5 p-md-3 zone-buy">
                         <div class="text-center">
-                            <button type="button" class="btn-light button-buy text-white">Buy your amiibo</button>
+                            <button type="button" class="btn-light button-buy text-white px-sm-2 py-sm-2 px-md-4 py-md-3">Buy your amiibo</button>
                         </div>
                     </div>
                 </div>
@@ -140,59 +141,61 @@
 
             <!-- Section 3 Yoshi of the month -->
             <div class="page" id="section3" style="/* visibility: visible; *//* opacity: 1; */">
-                <div class="row justify-content-center">
+                <div class="container-section3 mt-md-4 pt-md-4">
+                        <div class="row justify-content-center">
 
-                    <!-- titre de la page -->
+                            <!-- titre de la page -->
 
-                    <div class="texte-section3">
-                        <h1 class="text-center">Yoshi of the month</h1>
-                    </div>
-                </div>
-
-                <!-- image Yoshi -->
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-4 col-sm-6 col-12 mt-5 mt-sm-3 mt-md-5 justify-content-center">
-
-                        <div class="card-custom-yoshi2 m-auto " style="margin: 0 auto;/* text-align: center; *//* width: 64%; */">
-                            <img class="card-img-top" src="assets/images/IndianYoshi.png" alt="Card yoshi of the month">
-                            <div class="card-month" style="
-                            display: inline-block; width: 18rem;">
-                            <p class="card-text2">Unlock your Indian Yoshi and impress your friends in game!!<br><span>available only in March</span></p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-                <!-- Compteur -->
-
-                <div class="col-lg-push-4 col-sm-push-6 col-push-12 mt-5 mt-sm-3 mt-md-5">
-                    <div class="row justify-content-center">
-                        <div id="clockdiv">
-                            <p>Offer will expire in</p>
-                            <div>
-                                <span class="days">21</span>
-                                <div class="smalltext">Days</div>
-                            </div>
-                            <div>
-                                <span class="hours">21</span>
-                                <div class="smalltext">Hours</div>
-                            </div>
-                            <div>
-                                <span class="minutes">42</span>
-                                <div class="smalltext">Minutes</div>
-                            </div>
-                            <div>
-                                <span class="seconds">52</span>
-                                <div class="smalltext">Seconds</div>
+                            <div class="texte-section3">
+                                <h2 class="text-center">Yoshi of the month</h2>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-dark">Get our exclusive Indian Yoshi</button>
-                    </div>
 
+                        <!-- image Yoshi -->
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-4 col-sm-6 col-12 mt-4 mt-sm-2 mt-md-4 justify-content-center">
+
+                                <div class="card-custom-yoshi2 m-auto " style="margin: 0 auto;/* text-align: center; *//* width: 64%; */">
+                                    <img class="card-img-top" src="assets/images/IndianYoshi.png" alt="Card yoshi of the month">
+                                    <div class="card-month" style="
+                                    display: inline-block; width: 18rem;">
+                                    <p class="card-text2">Unlock your Indian Yoshi and impress your friends in game!!<br><span>available only in March</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Compteur -->
+
+                        <div class="col-lg-push-4 col-sm-push-6 col-push-12 mt-5 mt-sm-3 mt-md-5">
+                            <div class="row justify-content-center">
+                                <div id="clockdiv">
+                                    <p>Offer will expire in</p>
+                                    <div>
+                                        <span class="days">21</span>
+                                        <div class="smalltext">Days</div>
+                                    </div>
+                                    <div>
+                                        <span class="hours">21</span>
+                                        <div class="smalltext">Hours</div>
+                                    </div>
+                                    <div>
+                                        <span class="minutes">42</span>
+                                        <div class="smalltext">Minutes</div>
+                                    </div>
+                                    <div>
+                                        <span class="seconds">52</span>
+                                        <div class="smalltext">Seconds</div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-dark">Get our exclusive Indian Yoshi</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
 
 
@@ -214,7 +217,7 @@
                         <p>Can't load the tutorial</p>
                     </video>
 
-                    <h1 class="videoDescription">What is Amiibo ?</h1>
+                    <h2 class="videoDescription">What is Amiibo ?</h2>
                     <p class="videoDescription">Get cool in-game extras with amiibo accessories
                     Just tap to score new characters, game modes, or other perks</p>
 
@@ -270,38 +273,38 @@
 
         <!-- Section 5 -->
         <div class="page" id="section5">
-            <h1 id="topc">Find the golden yoshi and win 10% of reduction</h1>
-            <div class="row justify-content-center">
-                <!--debut -->
+            <div class="container-section5 mt-2 pt-2 mt-md-4 pt-md-4">
+                <h2 id="topc">Find the golden yoshi and win 10% of reduction</h2>
+                <div class="row justify-content-center">
+                    <!--debut -->
 
-                <div class="col-lg-2 col-md-2 col-sm-2 col-3">
-                    <img src="assets/images/yoshioeuf.png" alt="topsecret" class="imgtop" id="img1"
-                        onclick="changeImages(event)">
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-3">
-                    <img src="assets/images/yoshioeuf.png" alt="topsecret2" class="imgtop" id="img2"
-                        onclick="changeImages(event)">
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-3">
-                    <img src="assets/images/yoshioeuf.png" alt="topsecret3" class="imgtop" id="img3"
-                        onclick="changeImages(event)">
-                </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-3">
+                        <img src="assets/images/yoshioeuf.png" alt="topsecret" class="imgtop" id="img1"
+                            onclick="changeImages(event)">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-3">
+                        <img src="assets/images/yoshioeuf.png" alt="topsecret2" class="imgtop" id="img2"
+                            onclick="changeImages(event)">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-3">
+                        <img src="assets/images/yoshioeuf.png" alt="topsecret3" class="imgtop" id="img3"
+                            onclick="changeImages(event)">
+                    </div>
 
+                </div>
+                <div class="row justify-content-center" id="para">
+                    <p class="mx-2">You have one chance every day, if you found the golden
+                        yoshi
+                        share it on twitter </p>
+                    <p><a href="https://twitter.com/intent/tweet?screen_name=NintendoUK&ref_src=twsrc%5Etfw"
+                        class="twitter-mention-button" data-size="large" data-text="Hi #pimpmyyoshi give me my reduction!"
+                        data-show-count="false">Tweet to @NintendoUK</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+                </div>
             </div>
-            <p class="row justify-content-center" id="para"> You have one chance every day, if you found the golden
-                yoshi
-                share it on twitter</p>
-            <a href="https://twitter.com/intent/tweet?screen_name=NintendoUK&ref_src=twsrc%5Etfw"
-                class="twitter-mention-button" data-size="large" data-text="Hi #pimpmyyoshi give me my reduction!"
-                data-show-count="false">Tweet to @NintendoUK</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-
-
-        <!--Fin container -->
-
     </div>
-    </div>
+
     <!--Fin container -->
 
 

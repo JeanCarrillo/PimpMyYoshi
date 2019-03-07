@@ -81,7 +81,13 @@
     font-weight: 800;
     z-index: 30;
     font-size: 1.3em;
-    color: white;
+    color: black;
+}
+.text-slider
+{
+    background-color: rgba(175,229,241,0.7);
+    border-radius:20px;
+    padding: 1em;
 }
 
 .section1_espace {
@@ -108,8 +114,10 @@
 }
 
 .section1_card .card {
-    background-color: transparent;
-    border: solid;
+    background-color: rgba(255,255,255,0.2);
+    border-radius:20px;
+    border: solid 1px #a59e9e;
+    padding-top: 6px;
     z-index: 30000;
 }
 
@@ -121,10 +129,21 @@
 .section1_card .card-body {
     color: black;
     border-radius: 0px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 0 0 20px 20px;
+}
+.card-slider {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 767px) {
 
+@media screen and (max-width: 767px) {
+    .text-slider{
+        background-color: transparent;
+        color: white;
+    }
     .section1_card,
     .invisible-sm {
         display: none;

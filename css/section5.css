@@ -1,13 +1,15 @@
 
 #topc {
-text-align: center;}
+  text-align: center;
+  color: #fff;
+}
 
 .imgtop {
   width: 80%;
   padding-top: 40%;
 }
 
-#para {
+.para {
   color: white;
   padding-top: 10%;
   margin-left: 5%;
