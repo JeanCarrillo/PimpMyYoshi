@@ -1,39 +1,11 @@
+
+
+/* Style de la card contenant le yoshi custom */
 .card-custom-yoshi
 {
     background-color: transparent;
     border: transparent;
     width: 65%;
-}
-
-@media screen and (max-width: 768px) {
-    .card-custom-yoshi
-    {
-        background-color: transparent;
-        border: transparent;
-        width: 38%;
-    }
-    .body-custom-yoshi
-    {
-        display: none;
-    }
-    .button-custom-accessory p
-    {
-        display: none;
-    }
-    h2
-    {
-        font-size: 1.4em;
-    }
-    h3
-    {
-        font-size: 1.2em;
-    }
-    .custom-container
-    {
-    margin-top: 50vh; 
-    transform: translateY(-50%); 
-    }
-
 }
 
 .card-custom-yoshi img
@@ -49,6 +21,8 @@
 {
     background-color: #fff;
 }
+
+/* Style des boutons de custom */
 
 .green-button
 {
@@ -73,17 +47,7 @@
 {
     background-color: #ff8f5f;
 }
-.button-buy
-{
-    background-color: #f7530d;
-    border: none;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: 1.3em;
-    border-radius: 10px;
-}
+
 .button-custom-accessory
 {
     border:none;
@@ -122,12 +86,52 @@
 {
     width: 50px;
 }
-#or
+/* Style des boutons achats */
+.button-buy
 {
-    font-size: 1.4em;
+    background-color: #f7530d;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.3em;
+    border-radius: 10px;
 }
-
+    
 .zone-custom
 {
     width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .card-custom-yoshi
+    {
+        width: 40%;
+    }
+    .body-custom-yoshi
+    {
+        display: none;
+    }
+    .button-custom-accessory span
+    {
+        display: none;
+    }
+    h2
+    {
+        font-size: 1.4em;
+    }
+    h3
+    {
+        font-size: 1.2em;
+    }
+
+}
+@media screen and (max-width: 576px) {
+    .custom-container
+        {
+            margin-top: 50vh; 
+            transform: translateY(-50%); 
+        }
 }
