@@ -1,0 +1,123 @@
+
+#background{
+    position: fixed;
+    top: 0;
+    left: -100px;
+    width: 110%;
+    background-image: url('../assets/images/bg-new.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+    z-index: -10;
+}
+
+.section1{
+    height:100%;
+}
+.section1 h1{
+    padding-top: 1em;
+    text-align: center;
+}
+.section1 p {
+}
+.section1_amiibo {
+    z-index: 40;
+}
+.section1_text {
+    width:100%;
+    left:0;
+    position: fixed;
+    top: 90%;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    z-index: 30;
+}
+.section1_espace{
+    line-height: 2em;
+}
+.section1_content img{
+    width:30%;
+    height: auto;
+}
+
+.section1_background1 {
+    position:fixed;
+    bottom:-25px;
+    left:-50px;
+    width:115%;
+    z-index: 20;
+    height: 80%;
+}
+.section1_card .card {
+    background-color: transparent;
+    border: solid;
+    z-index: 30000;
+}
+.section1_card img
+{
+    width:100%;
+    height: auto;
+}
+.section1_card .card-body {
+    color: black;
+border-radius: 0px;}
+@media screen and (max-width: 767px) {
+    .section1_card {
+      display:none;
+    }
+  }
+
+@keyframes section1_background1 {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -400px 0;
+    }
+}
+
+.background-anim {
+    -webkit-animation: pulsate-fwd 10s ease-in-out infinite both;
+    animation: pulsate-fwd 10s ease-in-out infinite both;
+}
+
+.pulsate-fwd {
+    -webkit-animation: pulsate-fwd 4s ease-in-out infinite both;
+    animation: pulsate-fwd 4s ease-in-out infinite both;
+}
+
+@-webkit-keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}

@@ -70,6 +70,14 @@ function displayPage(n) {
         $('iframe').css("visibility", "hidden");
     }
 
+    if( n == 1){
+        $(".navbar" + n).css("opacity", 1);
+        $('.navbar').css("visibility", "visible"); 
+    } else {
+        $(".navbar" + n).css("opacity", 0);
+        $('.navbar').css("visibility", "hidden");
+    }
+
     console.log(n);
     }
 
