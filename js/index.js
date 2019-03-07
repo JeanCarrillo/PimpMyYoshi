@@ -15,8 +15,11 @@ $(document).ready(function () {
 
     // Scroll  item click
     $('.scroll_item').click(function (event) {
-
-        displayPage($(this).attr('id'));
+        var page = $(this).attr('id');
+        displayPage(page);
+        if (page <= 5 & page >= 1){
+            currentSection = parseInt(page, 10);
+        }
     });
 
     // Listen to key
@@ -46,7 +49,7 @@ function switchSection(direction) {
         }
 
     } else if (direction == 'down') {
-        if (currentSection < 5) {
+        if (currentSection < 5 ) {
             currentSection += 1;
             console.log(direction);
         }
