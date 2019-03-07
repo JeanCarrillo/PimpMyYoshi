@@ -1,8 +1,8 @@
 
 #background{
     position: fixed;
-    top: 0;
-    left: -100px;
+    top: -10px;
+    left: -10px;
     width: 110%;
     background-image: url('../assets/images/bg-new.jpg');
     background-repeat: no-repeat;
