@@ -108,3 +108,12 @@ a:hover
 #section5 {
     background-color: #101C28;
 }
+
+/*Media queries */
+@media screen and (max-width: 768px) {
+    .scroll_item_active 
+    {
+        display: none;
+    }
+
+}

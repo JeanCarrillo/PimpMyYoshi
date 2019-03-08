@@ -11,16 +11,19 @@
 
 #para {
   color: white;
-  padding-top: 10%;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-top: 5%;
+  font-size: 2rem;
+  padding-left: 5%;
 }
 
-#section5 iframe {
-  justify-content: center;
+#tweeter {
+    text-align:center;
+}
+#Social {
+  justify-content: space-around;
+  padding-top: 2%;
 
 }
-
 
 @media (max-width: 991px) {
   .imgtop{
