@@ -1,12 +1,32 @@
 
-#tweet {
+#topc {
+  text-align: center;
+  color: #fff;
+}
+
+.imgtop {
+  width: 80%;
+  padding-top: 40%;
+}
+
+#para {
+  color: white;
+  padding-top: 5%;
+  font-size: 2rem;
   padding-left: 5%;
 }
-#topc {
-text-align: center;
+
+#tweeter {
+    text-align:center;
 }
-@media (max-width: 767.98px) {
-  .twitter-timeline {
-    display: none;
+#Social {
+  justify-content: space-around;
+  padding-top: 2%;
+
+}
+
+@media (max-width: 991px) {
+  .imgtop{
+    width: 80%;
+    padding-top: 40%;}
   }
-}
