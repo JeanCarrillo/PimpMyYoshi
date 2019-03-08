@@ -84,6 +84,18 @@
     box-sizing: initial;
 }
 
+#videoPlay:after {
+    content: url('/assets/images/play.png');
+    width: 72px;
+    height: 72px;
+    top: -45px;
+    display: block;
+    position: absolute;
+    left: calc(50% - 56px);
+    padding: 20px;
+    box-sizing: initial;
+}
+
 .question-box .h3 {
     font-size: 25px;
     padding: 0 2rem;
