@@ -65,7 +65,7 @@ function switchSection(direction) {
 function displayPage(n) {
 
     if (parseInt(n)){
-        $("#loading").css("visibility", "hidden"); 
+
 
 
         $('.scroll_item').removeClass('scroll_item_active');
@@ -76,6 +76,9 @@ function displayPage(n) {
     
         $(".page").css("opacity", 0);
         $("#section" + n).css("opacity", 1);
+
+        $("#loading").css("opacity", 0);
+        $("#loading").css("visibility", "hidden"); 
     
         if( n == 5){
             $('iframe').css("visibility", "visible"); 
@@ -91,6 +94,7 @@ function displayPage(n) {
     } else if (n == "loading"){
         $(".page").css("visibility", "hidden"); 
         $("#loading").css("visibility", "visible"); 
+        $("#loading").css("opacity", 1);
     }
 
 
