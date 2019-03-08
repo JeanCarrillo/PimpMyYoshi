@@ -19,10 +19,6 @@ body {
     z-index: 10;
 }
 
-#scroll:hover{
-
-}
-
 .scroll_item {
     border: 3px solid #FFF;
     width: 30px;
@@ -83,4 +79,12 @@ body {
 
 #section5 {
     background-color: #101C28;
+}
+
+@media (max-width: 992px) { 
+    .scroll_item:hover{
+        background: #FFF;
+        width: 30px;
+        text-indent: 800px;
+    }
 }
