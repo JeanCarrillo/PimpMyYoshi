@@ -15,18 +15,25 @@ $(document).ready(function () {
 
     // Scroll  item click
     $('.scroll_item').click(function (event) {
-
-        displayPage($(this).attr('id'));
+        var page = $(this).attr('id');
+        displayPage(page);
+        if (page <= 5 & page >= 1){
+            currentSection = parseInt(page, 10);
+        }
     });
 
     // Listen to key
     document.addEventListener("keydown", keyPressed);
 
+    displayPage("loading");
 
-    resize();
-    displayPage(currentSection);
 
 });
+
+window.onload = function() {
+    ini();
+  };
+
 
 // Switch section on key press
 function keyPressed(event) {
@@ -46,7 +53,7 @@ function switchSection(direction) {
         }
 
     } else if (direction == 'down') {
-        if (currentSection < 5) {
+        if (currentSection < 5 ) {
             currentSection += 1;
             console.log(direction);
         }
@@ -56,26 +63,40 @@ function switchSection(direction) {
 
 // Display the n page
 function displayPage(n) {
-    $('.scroll_item').removeClass('scroll_item_active');
-    $("#" + n).addClass('scroll_item_active');
 
-    $(".page").css("visibility", "hidden");
-    $("#section" + n).css("visibility", "visible");
+    if (parseInt(n)){
 
-    $(".page").css("opacity", 0);
-    $("#section" + n).css("opacity", 1);
 
-    if( n == 5){
-        $('iframe').css("visibility", "visible"); 
-    } else {
-        $('iframe').css("visibility", "hidden");
+
+        $('.scroll_item').removeClass('scroll_item_active');
+        $("#" + n).addClass('scroll_item_active');
+    
+        $(".page").css("visibility", "hidden");
+        $("#section" + n).css("visibility", "visible");
+    
+        $(".page").css("opacity", 0);
+        $("#section" + n).css("opacity", 1);
+
+        $("#loading").css("opacity", 0);
+        $("#loading").css("visibility", "hidden"); 
+    
+        if( n == 5){
+            $('iframe').css("visibility", "visible"); 
+        } else {
+            $('iframe').css("visibility", "hidden");
+        }
+    
+        if( n == 4){
+            $('.ytplayer').css("visibility", "visible"); 
+        } else {
+            $('.ytplayer').css("visibility", "hidden");
+        }
+    } else if (n == "loading"){
+        $(".page").css("visibility", "hidden"); 
+        $("#loading").css("visibility", "visible"); 
+        $("#loading").css("opacity", 1);
     }
 
-    if( n == 4){
-        $('.ytplayer').css("visibility", "visible"); 
-    } else {
-        $('.ytplayer').css("visibility", "hidden");
-    }
 
     // if( n == 1){
     //     $(".navbar" + n).css("opacity", 1);
@@ -90,4 +111,9 @@ function displayPage(n) {
 
 function resize() {
     //Do stuff.
+}
+
+function ini(){
+    resize();
+    displayPage(currentSection);
 }
