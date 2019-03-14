@@ -57,15 +57,17 @@ $(document).ready(function () {
         $('#change-image').attr('src', yoshi.image[colorYoshi][accessoryYoshi]);
         $('.title-custom').text(yoshi.titleCard[colorYoshi][accessoryYoshi]);
         $('.text-custom').text(yoshi.sentence[colorYoshi]);
-        }
+    }
     //Fonction ppur augmenter ou diminuer le prix si ajout ou non d'un accessoire
     function lowerPrice(actualPrice) {
         if (price == 'expensive') {
-                $('.price').text('30€');}
+            $('.price').text('30€');
+        }
     }
     function increasedPrice(actualPrice) {
         if (price == 'base') {
-                $('.price').text('40€');}
+            $('.price').text('40€');
+        }
     }
     //Color buttons on click
     $('.green-button').on({
