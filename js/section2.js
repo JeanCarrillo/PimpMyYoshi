@@ -58,6 +58,15 @@ $(document).ready(function () {
         $('.title-custom').text(yoshi.titleCard[colorYoshi][accessoryYoshi]);
         $('.text-custom').text(yoshi.sentence[colorYoshi]);
         }
+    //Fonction ppur augmenter ou diminuer le prix si ajout ou non d'un accessoire
+    function lowerPrice(actualPrice) {
+        if (price == 'expensive') {
+                $('.price').text('30€');}
+    }
+    function increasedPrice(actualPrice) {
+        if (price == 'base') {
+                $('.price').text('40€');}
+    }
     //Color buttons on click
     $('.green-button').on({
         'click': function () {
@@ -86,8 +95,7 @@ $(document).ready(function () {
             activeButton('.none', 'active-none');
             accessory = 'none';
             customYoshi(color, accessory);
-            if (price == 'expensive') {
-                $('.price').text('30€');}
+            lowerPrice(price)
             price = 'base'; 
         }
     });
@@ -96,8 +104,7 @@ $(document).ready(function () {
             activeButton('.moustache', 'active-none');
             accessory = 'moustache';
             customYoshi(color, accessory);
-             if (price == 'base') {
-                $('.price').text('40€');}
+            increasedPrice(price)
             price = 'expensive';
         }
     });
@@ -106,8 +113,7 @@ $(document).ready(function () {
             activeButton('.sunglasses', 'active-none');
             accessory = 'sunglasses';
             customYoshi(color, accessory);
-            if (price == 'base') {
-                $('.price').text('40€');}
+            increasedPrice(price)
             price = 'expensive';
         }
     });
