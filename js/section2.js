@@ -3,173 +3,112 @@ $(document).ready(function () {
     let color = 'green';
     let accessory = 'none';
     let price = 'base';
-    //Customization 
+    //Objet contenant les caractéristiques du Yoshi à customiser
+    const yoshi = {
+    image : {  
+        pink : {
+            none : 'assets/images/yoshiRose.png', 
+            moustache : 'assets/images/yoshiRoseMoustache.png', 
+            sunglasses : 'assets/images/yoshiRoseLunettes.png',
+            },
+        green : {
+            none : 'assets/images/yoshiVert.png', 
+            moustache : 'assets/images/yoshiVertMoustache.png', 
+            sunglasses : 'assets/images/yoshiVertLunettes.png',
+            },
+         blue : {
+            none : 'assets/images/yoshiBleu.png', 
+            moustache : 'assets/images/yoshiBleuMoustache.png', 
+            sunglasses : 'assets/images/yoshiBleuLunettes.png',
+         },
+     },
+    sentence : {  
+        pink : 'The pink Yoshi for candy floss lovers.',
+        green : 'The orignal green Yoshi for purists.',
+        blue : 'The blue Yoshi for dreamers.',
+        moustache : 'Yoshi dressed as his best friend.',
+        sunglasses : 'Yoshi with his coolest look.',
+    },
+    titleCard : {
+        pink : {
+            none : 'Pink Yoshi', 
+            moustache : 'Pink Yoshi with Mario\'s hat', 
+            sunglasses : 'Pink Yoshi with sunglasses',
+            },
+        green : {
+            none : 'Green Yoshi', 
+            moustache : 'Green Yoshi with Mario\'s hat', 
+            sunglasses : 'Green Yoshi with sunglasses',
+            },
+         blue : {
+            none : 'Blue Yoshi', 
+            moustache : 'Blue Yoshi with Mario\'s hat', 
+            sunglasses : 'Blue Yoshi with sunglasses',
+            },
+        }
+    }
+    //Fonction pour indiquer visuellement quel bouton est actif
+    function activeButton(button, activeState) {
+        $('#'+activeState).removeAttr('id');
+        $(button).attr('id', activeState);
+    }
+   //Fonction qui choisit image et texte à afficher en fonction de la couleur et l'accessoire
+   function customYoshi(colorYoshi, accessoryYoshi) {
+        $('#change-image').attr('src', yoshi.image[colorYoshi][accessoryYoshi]);
+        $('.title-custom').text(yoshi.titleCard[colorYoshi][accessoryYoshi]);
+        $('.text-custom').text(yoshi.sentence[colorYoshi]);
+        }
+    //Color buttons on click
     $('.green-button').on({
         'click': function () {
-            $('#active').removeAttr('id');
-            $('.green-button').attr('id', 'active');
-
-            switch (accessory) {
-            case 'none':
-                $('#change-image').attr('src', 'assets/images/yoshiVert.png');
-                $('.title-custom').text('Green Yoshi');
-                $('.text-custom').text('The orignal green Yoshi for purists.');
-            break;
-            case 'moustache':
-                $('#change-image').attr('src', 'assets/images/yoshiVertMoustache.png');
-                $('.title-custom').text('Green Yoshi with Mario\'s hat');
-                $('.text-custom').text('Yoshi dressed as his best friend.');
-            break;
-            case 'sunglasses':
-                $('#change-image').attr('src', 'assets/images/yoshiVertLunettes.png');
-                $('.title-custom').text('Green Yoshi with sunglasses');
-                $('.text-custom').text('Yoshi with his coolest look.');
-                break;
-            }
+            activeButton('.green-button', 'active');
             color = 'green';
+            customYoshi(color, accessory);
         }
     });
-
     $('.pink-button').on({
         'click': function () {
-            $('#active').removeAttr('id');
-            $('.pink-button').attr('id', 'active');
-
-            switch (accessory) {
-            case 'none':
-                $('#change-image').attr('src', 'assets/images/yoshiRose.png');
-                $('.title-custom').text('Pink Yoshi');
-                $('.text-custom').text('The pink Yoshi for candy floss lovers.');
-            break;
-            case 'moustache':
-                $('#change-image').attr('src', 'assets/images/yoshiRoseMoustache.png');
-                $('.title-custom').text('Pink Yoshi with Mario\'s hat');
-                $('.text-custom').text('Yoshi dressed as his best friend.');
-            break;
-            case 'sunglasses':
-                $('#change-image').attr('src', 'assets/images/yoshiRoseLunettes.png');
-                $('.title-custom').text('Pink Yoshi with sunglasses');
-                $('.text-custom').text('Yoshi with his coolest look.');
-                break;
-            }
+            activeButton('.pink-button', 'active');
             color = 'pink';
+            customYoshi(color, accessory);
         }
     });
-
     $('.blue-button').on({
         'click': function () {
-            $('#active').removeAttr('id');
-            $('.blue-button').attr('id', 'active');
-
-            switch (accessory) {
-            case 'none':
-                $('#change-image').attr('src', 'assets/images/yoshiBleu.png');
-                $('.title-custom').text('Blue Yoshi');
-                $('.text-custom').text('The blue Yoshi for dreamers.');
-            break;
-            case 'moustache':
-                $('#change-image').attr('src', 'assets/images/yoshiBleuMoustache.png');
-                $('.title-custom').text('Blue Yoshi with Mario\'s hat');
-                $('.text-custom').text('Yoshi dressed as his best friend.');
-            break;
-            case 'sunglasses':
-                $('#change-image').attr('src', 'assets/images/yoshiBleuLunettes.png');
-                $('.title-custom').text('Blue Yoshi with sunglasses');
-                $('.text-custom').text('Yoshi with his coolest look.');
-            break;
-            }
+            activeButton('.blue-button', 'active');
             color = 'blue';
+            customYoshi(color, accessory);
         }
     });
-
-    $('.moustache').on({
-        'click': function () {
-            $('#active-none').removeAttr('id');
-            $('.moustache').attr('id', 'active-none');
-
-            if (price == 'base') {
-                $('.price').text('40€');
-            }
-            switch (color) {
-            case 'green' :
-                $('#change-image').attr('src', 'assets/images/yoshiVertMoustache.png');
-                $('.title-custom').text('Green Yoshi with Mario\'s hat');
-                $('.text-custom').text('Yoshi dressed as his best friend.');
-            break;
-            case 'pink' :
-                $('#change-image').attr('src', 'assets/images/yoshiRoseMoustache.png');
-                $('.title-custom').text('Pink Yoshi with Mario\'s hat');
-                $('.text-custom').text('The pink Yoshi for candy floss lovers.');
-            break;
-            case 'blue' :
-                $('#change-image').attr('src', 'assets/images/yoshiBleuMoustache.png');
-                $('.title-custom').text('Blue Yoshi with Mario\'s hat');
-                $('.text-custom').text('The blue Yoshi for dreamers.');
-            break;
-            }
-            accessory = 'moustache';
-            price = 'expensive';
-        }
-    });
+    //Accessory buttons on click
     $('.none').on({
         'click': function () {
-            $('#active-none').removeAttr('id');
-            $('.none').attr('id', 'active-none');
-
-            if (price == 'expensive') {
-                $('.price').text('30€');
-            }
-
-            switch (color) {
-            case 'green' :
-                $('#change-image').attr('src', 'assets/images/yoshiVert.png');
-                $('.title-custom').text('Green Yoshi');
-                $('.text-custom').text('The orignal green Yoshi for purists.');
-            break;
-            case 'pink' :
-                $('#change-image').attr('src', 'assets/images/yoshiRose.png');
-                $('.title-custom').text('Pink Yoshi');
-                $('.text-custom').text('The pink Yoshi for candy floss lovers.');
-            break;
-            case 'blue' :
-                $('#change-image').attr('src', 'assets/images/yoshiBleu.png');
-                $('.title-custom').text('Blue Yoshi');
-                $('.text-custom').text('The blue Yoshi for dreamers.');
-            break;
-            }
+            activeButton('.none', 'active-none');
             accessory = 'none';
-            price = 'base';
+            customYoshi(color, accessory);
+            if (price == 'expensive') {
+                $('.price').text('30€');}
+            price = 'base'; 
+        }
+    });
+    $('.moustache').on({
+        'click': function () {
+            activeButton('.moustache', 'active-none');
+            accessory = 'moustache';
+            customYoshi(color, accessory);
+             if (price == 'base') {
+                $('.price').text('40€');}
+            price = 'expensive';
         }
     });
     $('.sunglasses').on({
         'click': function () {
-            $('#active-none').removeAttr('id');
-            $('.sunglasses').attr('id', 'active-none');
-
-            if (price == 'base') {
-                $('.price').text('40€');
-            }
-            switch (color) {
-            case 'green' :
-                $('#change-image').attr('src', 'assets/images/yoshiVertLunettes.png');
-                $('.title-custom').text('Green Yoshi with sunglasses');
-                $('.text-custom').text('Yoshi with his coolest look.');
-            break;
-            case 'pink' :
-                $('#change-image').attr('src', 'assets/images/yoshiRoseLunettes.png');
-                $('.title-custom').text('Pink Yoshi with sunglasses');
-                $('.text-custom').text('Yoshi with his coolest look.');
-            break;
-            case 'blue' :
-                $('#change-image').attr('src', 'assets/images/yoshiBleuLunettes.png');
-                $('.title-custom').text('Blue Yoshi with sunglasses');
-                $('.text-custom').text('Yoshi with his coolest look.');
-                break;
-            }
+            activeButton('.sunglasses', 'active-none');
             accessory = 'sunglasses';
+            customYoshi(color, accessory);
+            if (price == 'base') {
+                $('.price').text('40€');}
             price = 'expensive';
         }
     });
-
-
 });
