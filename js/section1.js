@@ -13,3 +13,17 @@ function parallaxIt(e, target, movement) {
         y: (relY - $this.height() / 2) / $this.height() * movement
     });
 }
+
+function randomYoshiImageUrl() {
+    const yoshiColors = Object.keys(yoshi.image)
+    let yoshiRandomColor = yoshiColors[Math.floor(yoshiColors.length * Math.random())]
+    let yoshiAccessories = Object.keys(yoshi.image[yoshiRandomColor])
+    let yoshiRandomAccessory = yoshiAccessories[Math.floor(yoshiAccessories.length * Math.random())]
+    return (yoshi.image[yoshiRandomColor][yoshiRandomAccessory])
+}
+
+function changeYoshiImage() {
+    const customYoshi = document.getElementById("customYoshiSection1")
+    customYoshi.setAttribute("src", randomYoshiImageUrl());       
+}
+setInterval(changeYoshiImage, 1000)
