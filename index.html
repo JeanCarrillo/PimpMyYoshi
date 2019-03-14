@@ -53,7 +53,7 @@
                         <div class="col-md-8 col-12 section1_images">
                             <img src="assets/images/section1_yoshi.png" alt="Yoshi" class="section1_yoshi">
                             <img src="assets/images/fleche_yoshi.png" alt="Arrow" class="section1_arrow pulsate-fwd">
-                            <img src="assets/images/section1_yoshiBleuMoustache.png" alt="Yoshi amiibo"
+                            <img id="customYoshiSection1" src="assets/images/yoshiBleuLunettes.png" alt="Yoshi amiibo"
                                 class="section1_amiibo pulsate-fwd">
                         </div>
 
@@ -72,7 +72,8 @@
 
                     </div>
                 </div>
-                <p class="section1_text"><a onclick="displayPage(2)"><span class="text-slider">Customize your Amiibo and
+                <p class="section1_text"><a onclick="displayPage(2)"><span class="text-slider">Customize your Amiibo
+                            and
                             bring him in exciting adventures!</span></a></p>
                 <img src="assets/images/bg2-new.png" alt="Landscape" class="section1_background1" id="foreground">
                 <div id="background"></div>
@@ -98,8 +99,7 @@
                         <div class="zone-custom text-center pb-lg-5 pb-sm-4 pb-4">
                             <h3 class="text-center">Choose your color</h3>
                             <ul class="nav justify-content-center">
-                                <li class="nav-item mr-5"><button id="active"
-                                        class="btn green-button button-custom"></button></li>
+                                <li class="nav-item mr-5"><button id="active" class="btn green-button button-custom"></button></li>
                                 <li class="nav-item mr-5"><button class="btn pink-button button-custom"></button></li>
                                 <li class="nav-item"><button class="btn blue-button button-custom"></button></li>
                             </ul>
@@ -108,34 +108,26 @@
                         <div class="zone-custom text-center pb-lg-5 pb-sm-3 pb-2">
                             <h3 class="text-center">Choose your accessory</h3>
                             <ul class="nav justify-content-center nav-accessory">
-                                <li class="nav-item mr-2 mr-sm-2 mr-md-5"><button type="button"
-                                        class="btn none btn-light button-custom-accessory" id="active-none"><img
-                                            class="img-button" src="assets/images/cross.png"
-                                            alt="cross" /><span><br />None</span></button></li>
-                                <li class="nav-item item-sunglasses mr-2 mr-sm-2 mr-md-5"><button type="button"
-                                        class="btn sunglasses btn-light button-custom-accessory"><img class="img-button"
-                                            src="assets/images/lunettes.png"
-                                            alt="Sunglasses" /><span><br />Glasses</span></button></li>
-                                <li class="nav-item item-moustache"><button type="button"
-                                        class="btn moustache btn-light button-custom-accessory"><img class="img-button"
-                                            src="assets/images/moustache.png"
-                                            alt="moustache" /><span><br />Mario</span></button></li>
+                                <li class="nav-item mr-2 mr-sm-2 mr-md-5"><button type="button" class="btn none btn-light button-custom-accessory"
+                                        id="active-none"><img class="img-button" src="assets/images/cross.png" alt="cross" /><span><br />None</span></button></li>
+                                <li class="nav-item item-sunglasses mr-2 mr-sm-2 mr-md-5"><button type="button" class="btn sunglasses btn-light button-custom-accessory"><img
+                                            class="img-button" src="assets/images/lunettes.png" alt="Sunglasses" /><span><br />Glasses</span></button></li>
+                                <li class="nav-item item-moustache"><button type="button" class="btn moustache btn-light button-custom-accessory"><img
+                                            class="img-button" src="assets/images/moustache.png" alt="moustache" /><span><br />Mario</span></button></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Image et texte du Yoshi personnalisé -->
                     <div class="col-12 col-md-8 col-lg-3 order-lg-1 order-sm-2 order-sx-2 justify-content-center">
                         <div class="card card-custom-yoshi m-auto">
-                            <img id="change-image" src="assets/images/yoshiVert.png" alt="Classic Yoshi"
-                                class="card-img-top py-2">
+                            <img id="change-image" src="assets/images/yoshiVert.png" alt="Classic Yoshi" class="card-img-top py-2">
                             <div class="body-custom-yoshi card-body">
                                 <h4 class="card-title title-custom">Green Yoshi</h4>
                                 <p class="card-text text-custom">The orignal green Yoshi for purists</p>
                             </div>
                         </div>
                         <p class="text-center mt-2 zone-prix">Price: <span class="price">30€</span></p>
-                        <p class="offer"><span class="badge-pill badge-warning p-2">20% off</span> if you <a
-                                href="https://www.amazon.fr/Yoshis-Woolly-World-Amiibo-Yoshi/dp/B00VK5P2XO/ref=sr_1_11?s=videogames&ie=UTF8&qid=1551986701&sr=1-11&keywords=amiibo+yoshi+game">buy
+                        <p class="offer"><span class="badge-pill badge-warning p-2">20% off</span> if you <a href="https://www.amazon.fr/Yoshis-Woolly-World-Amiibo-Yoshi/dp/B00VK5P2XO/ref=sr_1_11?s=videogames&ie=UTF8&qid=1551986701&sr=1-11&keywords=amiibo+yoshi+game">buy
                                 it with the game</a></p>
                     </div>
                 </div>
@@ -143,8 +135,8 @@
                 <div class="row justify-content-center mb-4 mb-sm-4 mb-md-5">
                     <div class="col-8 col-md-5 p-md-3 zone-buy">
                         <div class="text-center">
-                            <button type="button"
-                                class="btn-light button-buy text-white px-sm-2 py-sm-2 px-md-4 py-md-3">Buy your
+                            <button type="button" class="btn-light button-buy text-white px-sm-2 py-sm-2 px-md-4 py-md-3">Buy
+                                your
                                 amiibo</button>
                         </div>
                     </div>
@@ -155,7 +147,7 @@
 
 
         <!-- Section 3 Yoshi of the month -->
-        <div class="page" id="section3" style="/* visibility: visible; *//* opacity: 1; */">
+        <div class="page" id="section3">
             <div class="container-section3 mt-md-2 pt-md-2">
                 <div class="row justify-content-center">
 
@@ -170,8 +162,7 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-4 col-sm-6 col-12 mt-4 mt-sm-2 mt-md-2 justify-content-center">
 
-                        <div class="card-custom-yoshi2 m-auto "
-                            style="margin: 0 auto;/* text-align: center; *//* width: 64%; */">
+                        <div class="card-custom-yoshi2 m-auto " style="margin: 0 auto;/* text-align: center; *//* width: 64%; */">
                             <img class="card-img-top" src="assets/images/IndianYoshi.png" alt="Card yoshi of the month">
                             <div class="card-month" style="
                                     display: inline-block; width: 18rem;">
@@ -227,8 +218,7 @@
             <div class="row justify-content-center">
 
                 <div id="videoPlayer">
-                    <video
-                        poster="https://cdn.gamerant.com/wp-content/uploads/hard-to-find-amiibo-restock.jpg.optimal.jpg"
+                    <video poster="https://cdn.gamerant.com/wp-content/uploads/hard-to-find-amiibo-restock.jpg.optimal.jpg"
                         controls muted id="tutoVideo" width="1024" height="576">
                         <source src='assets/videos/amiibo.webm' type='video/webm; codecs="vp8.0, A_OPUS"' />
                         <source src="assets/videos/amiibo.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
@@ -242,9 +232,8 @@
                 </div>
 
                 <div class="ytplayer d-none d-sm-none d-lg-block" id='ytcontainer'>
-                    <iframe class="ytplayer" width="560" height="315"
-                        src="https://www.youtube-nocookie.com/embed/YTG_IQfraUk" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    <iframe class="ytplayer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/YTG_IQfraUk"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
             </div>
@@ -264,7 +253,8 @@
                     <div class="question-box">
                         <div class="question-header"> </div>
                         <p class="h3">Can I play as my amiibo figure as a character in the games?</p>
-                        <p xmlns:i18n="http://apache.org/cocoon/i18n/2.1">Compatibility and functionality of amiibo vary
+                        <p xmlns:i18n="http://apache.org/cocoon/i18n/2.1">Compatibility and functionality of amiibo
+                            vary
                             by game.</p>
 
                         <p class="d-none"> titles allow you to play as your amiibo character. For example, in Super
@@ -300,16 +290,13 @@
 
 
                     <div class="col-lg-2 col-md-2 col-sm-2 col-3">
-                        <img src="assets/images/yoshioeuf.png" alt="topsecret" class="imgtop" id="img1"
-                            onclick="changeImages(event)">
+                        <img src="assets/images/yoshioeuf.png" alt="topsecret" class="imgtop" id="img1" onclick="changeImages(event)">
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-3">
-                        <img src="assets/images/yoshioeuf.png" alt="topsecret2" class="imgtop" id="img2"
-                            onclick="changeImages(event)">
+                        <img src="assets/images/yoshioeuf.png" alt="topsecret2" class="imgtop" id="img2" onclick="changeImages(event)">
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-3">
-                        <img src="assets/images/yoshioeuf.png" alt="topsecret3" class="imgtop" id="img3"
-                            onclick="changeImages(event)">
+                        <img src="assets/images/yoshioeuf.png" alt="topsecret3" class="imgtop" id="img3" onclick="changeImages(event)">
                     </div>
 
                 </div>
@@ -317,9 +304,9 @@
                     on
                     twitter for your reward!</p>
                 <div id="tweeter">
-                    <a href="https://twitter.com/intent/tweet?button_hashtag=pimpmyyoshi&ref_src=twsrc%5Etfw"
-                        class="twitter-hashtag-button" data-size="large"
-                        data-text="Hi #pimpmyyoshi send me my reduction!" data-show-count="false">Tweet #pimpmyyoshi</a>
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=pimpmyyoshi&ref_src=twsrc%5Etfw" class="twitter-hashtag-button"
+                        data-size="large" data-text="Hi #pimpmyyoshi send me my reduction!" data-show-count="false">Tweet
+                        #pimpmyyoshi</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="row" id="Social">

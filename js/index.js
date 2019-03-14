@@ -117,3 +117,49 @@ function ini(){
     resize();
     displayPage(currentSection);
 }
+
+// Yoshi Object
+
+const yoshi = {
+    image: {
+        pink: {
+            none: 'assets/images/yoshiRose.png',
+            moustache: 'assets/images/yoshiRoseMoustache.png',
+            sunglasses: 'assets/images/yoshiRoseLunettes.png',
+        },
+        green: {
+            none: 'assets/images/yoshiVert.png',
+            moustache: 'assets/images/yoshiVertMoustache.png',
+            sunglasses: 'assets/images/yoshiVertLunettes.png',
+        },
+        blue: {
+            none: 'assets/images/yoshiBleu.png',
+            moustache: 'assets/images/yoshiBleuMoustache.png',
+            sunglasses: 'assets/images/yoshiBleuLunettes.png',
+        },
+    },
+    sentence: {
+        pink: 'The pink Yoshi for candy floss lovers.',
+        green: 'The orignal green Yoshi for purists.',
+        blue: 'The blue Yoshi for dreamers.',
+        moustache: 'Yoshi dressed as his best friend.',
+        sunglasses: 'Yoshi with his coolest look.',
+    },
+    titleCard: {
+        pink: {
+            none: 'Pink Yoshi',
+            moustache: 'Pink Yoshi with Mario\'s hat',
+            sunglasses: 'Pink Yoshi with sunglasses',
+        },
+        green: {
+            none: 'Green Yoshi',
+            moustache: 'Green Yoshi with Mario\'s hat',
+            sunglasses: 'Green Yoshi with sunglasses',
+        },
+        blue: {
+            none: 'Blue Yoshi',
+            moustache: 'Blue Yoshi with Mario\'s hat',
+            sunglasses: 'Blue Yoshi with sunglasses',
+        },
+    }
+}
