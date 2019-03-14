@@ -17,7 +17,7 @@ $(document).ready(function () {
     $('.scroll_item').click(function (event) {
         var page = $(this).attr('id');
         displayPage(page);
-        if (page <= 5 & page >= 1){
+        if (page <= 5 & page >= 1) {
             currentSection = parseInt(page, 10);
         }
     });
@@ -30,9 +30,9 @@ $(document).ready(function () {
 
 });
 
-window.onload = function() {
+window.onload = function () {
     ini();
-  };
+};
 
 
 // Switch section on key press
@@ -53,7 +53,7 @@ function switchSection(direction) {
         }
 
     } else if (direction == 'down') {
-        if (currentSection < 5 ) {
+        if (currentSection < 5) {
             currentSection += 1;
             console.log(direction);
         }
@@ -64,56 +64,46 @@ function switchSection(direction) {
 // Display the n page
 function displayPage(n) {
 
-    if (parseInt(n)){
-
-
+    if (parseInt(n)) {
 
         $('.scroll_item').removeClass('scroll_item_active');
         $("#" + n).addClass('scroll_item_active');
-    
+
         $(".page").css("visibility", "hidden");
         $("#section" + n).css("visibility", "visible");
-    
+
         $(".page").css("opacity", 0);
         $("#section" + n).css("opacity", 1);
 
         $("#loading").css("opacity", 0);
-        $("#loading").css("visibility", "hidden"); 
-    
-        if( n == 5){
-            $('iframe').css("visibility", "visible"); 
+        $("#loading").css("visibility", "hidden");
+
+        if (n == 5) {
+            $('iframe').css("visibility", "visible");
         } else {
             $('iframe').css("visibility", "hidden");
         }
-    
-        if( n == 4){
-            $('.ytplayer').css("visibility", "visible"); 
+
+        if (n == 4) {
+            $('.ytplayer').css("visibility", "visible");
         } else {
             $('.ytplayer').css("visibility", "hidden");
         }
-    } else if (n == "loading"){
-        $(".page").css("visibility", "hidden"); 
-        $("#loading").css("visibility", "visible"); 
+    } else if (n == "loading") {
+        $(".page").css("visibility", "hidden");
+        $("#loading").css("visibility", "visible");
         $("#loading").css("opacity", 1);
     }
 
-
-    // if( n == 1){
-    //     $(".navbar" + n).css("opacity", 1);
-    //     $('.navbar').css("visibility", "visible"); 
-    // } else {
-    //     $(".navbar" + n).css("opacity", 0);
-    //     $('.navbar').css("visibility", "hidden");
-    // }
-
     console.log(n);
-    }
+
+}
 
 function resize() {
     //Do stuff.
 }
 
-function ini(){
+function ini() {
     resize();
     displayPage(currentSection);
 }
