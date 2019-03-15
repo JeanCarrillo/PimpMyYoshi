@@ -97,19 +97,15 @@
     border:none;
     padding: 20px;
 }
-.button-custom:focus, .button-custom-accessory:focus
-{
-    border:solid 2px grey;
-}
-.button-custom:active, .button-custom-accessory:active
-{
-    border:solid 2px grey;
-}
 #active
 {
     border:solid 2px grey;
 }
 #active-none
+{
+    border:solid 2px grey;
+}
+.active-none
 {
     border:solid 2px grey;
 }

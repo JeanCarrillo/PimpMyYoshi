@@ -77,9 +77,22 @@ $(document).ready(function () {
     let price = 'base';
 
     //Fonction pour indiquer visuellement quel bouton est actif
-    function activeButton(button, activeState) {
-        $('#' + activeState).removeAttr('id');
+    function activeButtonColor(button, activeState) { 
+        $('#'+activeState).removeAttr('id');
         $(button).attr('id', activeState);
+    }
+    function noneButton (button, activeState){
+        if ($( ".sunglasses" ).is( ".active-none" ) || $( ".moustache" ).is( ".active-none" )){
+            $('.button-custom-accessory').toggleClass(activeState);
+        }
+        $(button).attr('id', activeState); 
+    }
+    function activeButtonAccessory(button, activeState) {
+            $(button).toggleClass(activeState)
+            $('#'+activeState).removeAttr('id');
+            if ($( ".none" ).is( ".active-none" )){
+            $('.none').toggleClass(activeState);
+        }
     }
     //Fonction qui choisit image et texte à afficher en fonction de la couleur et l'accessoire
     function customYoshi(colorYoshi, accessoryYoshi) {
@@ -106,7 +119,7 @@ $(document).ready(function () {
     //Color buttons on click
     $('.green-button').on({
         'click': function () {
-            activeButton('.green-button', 'active');
+            activeButtonColor('.green-button', 'active');
             color = 'green';
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(customizationElements.base[color]);
@@ -114,7 +127,7 @@ $(document).ready(function () {
     });
     $('.pink-button').on({
         'click': function () {
-            activeButton('.pink-button', 'active');
+            activeButtonColor('.pink-button', 'active');
             color = 'pink';
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(customizationElements.base[color]);
@@ -122,7 +135,7 @@ $(document).ready(function () {
     });
     $('.blue-button').on({
         'click': function () {
-            activeButton('.blue-button', 'active');
+            activeButtonColor('.blue-button', 'active');
             color = 'blue';
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(customizationElements.base[color]);
@@ -131,7 +144,7 @@ $(document).ready(function () {
     //Accessory buttons on click
     $('.none').on({
         'click': function () {
-            activeButton('.none', 'active-none');
+            noneButton('.none', 'active-none');
             accessory = 'none';
             customYoshi(color, accessory);
             lowerPrice(price)
@@ -141,7 +154,7 @@ $(document).ready(function () {
     });
     $('.moustache').on({
         'click': function () {
-            activeButton('.moustache', 'active-none');
+            activeButtonAccessory('.moustache', 'active-none');
             accessory = 'moustache';
             customYoshi(color, accessory);
             increasedPrice(price)
@@ -151,7 +164,7 @@ $(document).ready(function () {
     });
     $('.sunglasses').on({
         'click': function () {
-            activeButton('.sunglasses', 'active-none');
+            activeButtonAccessory('.sunglasses', 'active-none');
             accessory = 'sunglasses';
             customYoshi(color, accessory);
             increasedPrice(price)
