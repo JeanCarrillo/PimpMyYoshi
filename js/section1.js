@@ -33,7 +33,6 @@ function randomYoshiImageUrl(currentUrl) {
 function changeYoshiImage() {
     const customYoshi = document.getElementById("customYoshiSection1")
     let currentUrl = customYoshi.getAttribute("src")
-    console.log(currentUrl)
     customYoshi.setAttribute("src", randomYoshiImageUrl(currentUrl));
 }
 setInterval(changeYoshiImage, 1000)
