@@ -7,8 +7,10 @@ function changeImages(e){
     let monImage = document.getElementById(imgId);
     let resultRandom = Math.floor(Math.random() * 101)
 
-    if (resultRandom < 30) {
+    if (resultRandom < 100) {
         monImage.setAttribute('src', 'assets/images/doree.png');
+        $('.btn').click();
+
     }
     else
     {
@@ -23,3 +25,5 @@ function changeImages(e){
 }
 
 let recompenses = ['img1', 'img2', 'img3']
+
+

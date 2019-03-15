@@ -3,50 +3,7 @@ $(document).ready(function () {
     let color = 'green';
     let accessory = 'none';
     let price = 'base';
-    //Objet contenant les caractéristiques du Yoshi à customiser
-    const yoshi = {
-        image : {  
-            pink : {
-                none : 'assets/images/yoshiRose.png', 
-                moustache : 'assets/images/yoshiRoseMoustache.png', 
-                sunglasses : 'assets/images/yoshiRoseLunettes.png',
-            },
-            green : {
-                none : 'assets/images/yoshiVert.png', 
-                moustache : 'assets/images/yoshiVertMoustache.png', 
-                sunglasses : 'assets/images/yoshiVertLunettes.png',
-            },
-             blue : {
-                none : 'assets/images/yoshiBleu.png', 
-                moustache : 'assets/images/yoshiBleuMoustache.png', 
-                sunglasses : 'assets/images/yoshiBleuLunettes.png',
-             },
-         },
-        sentence : {  
-            pink : 'The pink Yoshi for candy floss lovers.',
-            green : 'The orignal green Yoshi for purists.',
-            blue : 'The blue Yoshi for dreamers.',
-            moustache : 'Yoshi dressed as his best friend.',
-            sunglasses : 'Yoshi with his coolest look.',
-        },
-        titleCard : {
-            pink : {
-                none : 'Pink Yoshi', 
-                moustache : 'Pink Yoshi with Mario\'s hat', 
-                sunglasses : 'Pink Yoshi with sunglasses',
-            },
-            green : {
-                none : 'Green Yoshi', 
-                moustache : 'Green Yoshi with Mario\'s hat', 
-                sunglasses : 'Green Yoshi with sunglasses',
-            },
-             blue : {
-                none : 'Blue Yoshi', 
-                moustache : 'Blue Yoshi with Mario\'s hat', 
-                sunglasses : 'Blue Yoshi with sunglasses',
-            },
-        }
-    }
+    
     //Fonction pour indiquer visuellement quel bouton est actif
     function activeButton(button, activeState) {
         $('#'+activeState).removeAttr('id');
@@ -73,6 +30,7 @@ $(document).ready(function () {
     $('.green-button').on({
         'click': function () {
             activeButton('.green-button', 'active');
+            $('#section2').css('background-color','#e6fff9');
             color = 'green';
             customYoshi(color, accessory);
         }
@@ -80,6 +38,7 @@ $(document).ready(function () {
     $('.pink-button').on({
         'click': function () {
             activeButton('.pink-button', 'active');
+            $('#section2').css('background-color','#ffe6e6');
             color = 'pink';
             customYoshi(color, accessory);
         }
@@ -87,6 +46,7 @@ $(document).ready(function () {
     $('.blue-button').on({
         'click': function () {
             activeButton('.blue-button', 'active');
+            $('#section2').css('background-color','#E8F1F8');
             color = 'blue';
             customYoshi(color, accessory);
         }
