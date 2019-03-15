@@ -54,16 +54,20 @@ const customizationElements = {
     hat: {
         marioCap: 'assets/images/Customization/cap-mario.png',
         raymanHair: 'assets/images/Customization/rayman-hair.png',
-        marioCrown: 'assets/images/Customization/crown-mario.png'
+        marioCrown: 'assets/images/Customization/crown-mario.png',
+        banana: 'assets/images/Customization/banana.png'
 
     },
-    moustache: {
+    mustache: {
         mario: 'assets/images/Customization/moustache-mario.png'
 
     },
     glasses: {
         sunglasses: 'assets/images/Customization/sunglasses.png'
 
+    },
+    glove: {
+        white: 'assets/images/Customization/glovesWhite.png'
     }
 }
 
@@ -81,9 +85,9 @@ $(document).ready(function () {
     function customYoshi(colorYoshi, accessoryYoshi) {
         $('#change-image').attr('src', yoshi.image[colorYoshi][accessoryYoshi]);
 
-        activeYoshi = yoshiFactory(customizationElements.base[colorYoshi], customizationElements.hat['raymanHair'], customizationElements.glasses['sunglasses']);
+        activeYoshi = yoshiFactory(customizationElements.base[colorYoshi], customizationElements.hat['raymanHair'], customizationElements.glasses['sunglasses'], customizationElements.mustache['mario'], customizationElements.glove['white']);
 
-        
+
         $('.title-custom').text(yoshi.titleCard[colorYoshi][accessoryYoshi]);
         $('.text-custom').text(yoshi.sentence[colorYoshi]);
     }
@@ -160,10 +164,12 @@ let context = canvasCusto.getContext('2d');
 let running = true;
 
 class Yoshi {
-    constructor(couleur, hat, glasses) {
+    constructor(couleur, hat, glasses, mustache, glove) {
         this.base = couleur;
         this.hat = hat;
         this.glasses = glasses;
+        this.mustache = mustache;
+        this.glove = glove;
         this.y = 50;
         this.dy = 0.3;
         this.hatY = canvasCusto.height*0.006;
@@ -192,6 +198,12 @@ class Yoshi {
             context.globalAlpha = 0.8;
             context.drawImage(this.glasses, canvasCusto.width*0.345, this.glassesY, canvasCusto.width*0.65, canvasCusto.height*0.32);
             context.restore()
+        }
+        if (this.mustache){
+            context.drawImage(this.glasses, canvasCusto.width*0.345, this.glassesY, canvasCusto.width*0.65, canvasCusto.height*0.32);
+        }
+        if (this.glove){
+            context.drawImage(this.glasses, canvasCusto.width*0.345, this.glassesY, canvasCusto.width*0.65, canvasCusto.height*0.32);
         }
         //context.drawImage(this.hat, 10, this.y, 200, 250);
     }
@@ -252,7 +264,7 @@ function animate() {
 animate();
 
 
-function yoshiFactory(base, hat, glasses) {
+function yoshiFactory(base, hat, glasses, mustache, glove) {
 
     this.base = new Image();
     this.base.src = base;
@@ -263,6 +275,14 @@ function yoshiFactory(base, hat, glasses) {
     if (glasses) {
         this.glasses = new Image();
         this.glasses.src = glasses;
+    }
+    if (mustache){
+        this.mustache = new Image();
+        this.mustache.src = mustache;
+    }
+    if (glove){
+        this.glove = new Image();
+        this.glove.src = mustache;
     }
 
 
