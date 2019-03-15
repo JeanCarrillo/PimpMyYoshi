@@ -108,6 +108,7 @@ $(document).ready(function () {
         'click': function () {
             activeButton('.green-button', 'active');
             color = 'green';
+            $('#section2').css('background-color','#e6fff9');
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
@@ -116,6 +117,7 @@ $(document).ready(function () {
         'click': function () {
             activeButton('.pink-button', 'active');
             color = 'pink';
+            $('#section2').css('background-color','#ffe6e6');
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
@@ -124,6 +126,7 @@ $(document).ready(function () {
         'click': function () {
             activeButton('.blue-button', 'active');
             color = 'blue';
+            $('#section2').css('background-color','#E8F1F8');
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
