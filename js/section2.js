@@ -85,7 +85,8 @@ $(document).ready(function () {
     function customYoshi(colorYoshi, accessoryYoshi) {
         $('#change-image').attr('src', yoshi.image[colorYoshi][accessoryYoshi]);
 
-        activeYoshi = yoshiFactory(customizationElements.base[colorYoshi], customizationElements.hat['raymanHair'], customizationElements.glasses['sunglasses'], customizationElements.mustache['mario'], customizationElements.glove['white']);
+        //activeYoshi = yoshiFactory(customizationElements.base[colorYoshi], customizationElements.hat['raymanHair'], customizationElements.glasses['sunglasses'], customizationElements.mustache['mario'], customizationElements.glove['white']);
+        activeYoshi = yoshiFactory(customizationElements.base[colorYoshi]);
 
 
         $('.title-custom').text(yoshi.titleCard[colorYoshi][accessoryYoshi]);
@@ -108,6 +109,7 @@ $(document).ready(function () {
             activeButton('.green-button', 'active');
             color = 'green';
             customYoshi(color, accessory);
+            activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
     });
     $('.pink-button').on({
@@ -115,6 +117,7 @@ $(document).ready(function () {
             activeButton('.pink-button', 'active');
             color = 'pink';
             customYoshi(color, accessory);
+            activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
     });
     $('.blue-button').on({
@@ -122,6 +125,7 @@ $(document).ready(function () {
             activeButton('.blue-button', 'active');
             color = 'blue';
             customYoshi(color, accessory);
+            activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
     });
     //Accessory buttons on click
@@ -132,6 +136,7 @@ $(document).ready(function () {
             customYoshi(color, accessory);
             lowerPrice(price)
             price = 'base';
+            activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
     });
     $('.moustache').on({
@@ -141,6 +146,7 @@ $(document).ready(function () {
             customYoshi(color, accessory);
             increasedPrice(price)
             price = 'expensive';
+            activeYoshi = yoshiFactory(customizationElements.base[color], customizationElements.hat['marioCap'], undefined, customizationElements.mustache['mario']);
         }
     });
     $('.sunglasses').on({
@@ -150,6 +156,7 @@ $(document).ready(function () {
             customYoshi(color, accessory);
             increasedPrice(price)
             price = 'expensive';
+            activeYoshi = yoshiFactory(customizationElements.base[color], undefined, customizationElements.glasses['sunglasses'], undefined);
         }
     });
 });
@@ -173,7 +180,9 @@ class Yoshi {
         this.y = 50;
         this.dy = 0.3;
         this.hatY = canvasCusto.height*0.006;
-        this.glassesY = canvasCusto.height*0.085
+        this.glassesY = canvasCusto.height*0.085;
+        this.mustacheY = canvasCusto.height*0.2;
+        this.gloveY = canvasCusto.height*0.205;
     }
 
     draw() {
@@ -187,6 +196,8 @@ class Yoshi {
         this.y += this.dy;
         this.hatY += this.dy;
         this.glassesY += this.dy;
+        this.mustacheY += this.dy;
+        this.gloveY += this.dy;
 
         //draw elements
         context.drawImage(this.base, 50, this.y, canvasCusto.width - 50, canvasCusto.height - 50);
@@ -200,10 +211,10 @@ class Yoshi {
             context.restore()
         }
         if (this.mustache){
-            context.drawImage(this.glasses, canvasCusto.width*0.345, this.glassesY, canvasCusto.width*0.65, canvasCusto.height*0.32);
+            context.drawImage(this.mustache, canvasCusto.width*0.148, this.mustacheY, canvasCusto.width*0.61, canvasCusto.height*0.32);
         }
         if (this.glove){
-            context.drawImage(this.glasses, canvasCusto.width*0.345, this.glassesY, canvasCusto.width*0.65, canvasCusto.height*0.32);
+            context.drawImage(this.glove, canvasCusto.width*0.138, this.gloveY, canvasCusto.width*0.88, canvasCusto.height*0.7);
         }
         //context.drawImage(this.hat, 10, this.y, 200, 250);
     }
@@ -282,12 +293,12 @@ function yoshiFactory(base, hat, glasses, mustache, glove) {
     }
     if (glove){
         this.glove = new Image();
-        this.glove.src = mustache;
+        this.glove.src = glove;
     }
 
 
 
-    this.wellCraftedYoshi = new Yoshi(this.base, this.hat, this.glasses);
+    this.wellCraftedYoshi = new Yoshi(this.base, this.hat, this.glasses, this.mustache, this.glove);
 
     return wellCraftedYoshi
 }
