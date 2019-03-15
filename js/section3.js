@@ -43,3 +43,19 @@ function initializeClock(id, endtime) {
 var deadline = new Date(Date.parse('2019-03-31'));
 initializeClock('clockdiv', deadline);
 
+// background click //
+function changeBackground() {
+  const randomColor = ["#00A591","#95DEE3","#EC9787","#EADEDB","#C48F65","#EDCDC2","#92B6D5"];
+  let randomNumber = Math.floor(Math.random(randomColor.length) * randomColor.length)
+  document.getElementById("section3").style.backgroundColor = randomColor[randomNumber]
+  document.getElementById("myPopup").style.visibility ="visible"
+} 
+
+
+/*
+const date = ' March 30, 2019';
+const message = 'Get your exclusif Yoshi before' + date + '!';
+
+window.confirm("message"); */
+
+
