@@ -49,31 +49,58 @@ const customizationElements = {
     base: {
         pink: 'assets/images/Customization/yoshiRose.png',
         green: 'assets/images/Customization/yoshiVert.png',
-        blue: 'assets/images/Customization/yoshiBleu.png'
+        blue: 'assets/images/Customization/yoshiBleu.png',
+        purple: 'assets/images/Customization/yoshiViolet.png'
     },
     hat: {
         marioCap: 'assets/images/Customization/cap-mario.png',
         raymanHair: 'assets/images/Customization/rayman-hair.png',
         marioCrown: 'assets/images/Customization/crown-mario.png',
-        banana: 'assets/images/Customization/banana.png'
+        banana: 'assets/images/Customization/banana.png',
+        none: 'assets/images/Customization/none.png'
 
     },
     mustache: {
-        mario: 'assets/images/Customization/moustache-mario.png'
+        mario: 'assets/images/Customization/moustache-mario.png',
+        fancyMoustache : 'assets/images/Customization/fancy-moustache.png',
+        none: 'assets/images/Customization/none.png'
 
     },
     glasses: {
-        sunglasses: 'assets/images/Customization/sunglasses.png'
+        sunglasses: 'assets/images/Customization/sunglasses.png',
+        fancyGlasses : 'assets/images/Customization/fancy-monocle.png',
+        none: 'assets/images/Customization/none.png'
 
     },
     glove: {
-        white: 'assets/images/Customization/glovesWhite.png'
-    }
+        white: 'assets/images/Customization/glovesWhite.png',
+        none: 'assets/images/Customization/none.png'
+    },
+    sentence: {
+        pink: 'The pink Yoshi for candy floss lovers.',
+        green: 'The orignal green Yoshi for purists.',
+        purple: 'The purple Yoshi for eccentrics.',
+        blue: 'The blue Yoshi for dreamers.',
+    },
+    titleCard: {
+        none: 'Classic Yoshi',
+        marioHat: 'Yoshi with Mario\'s hat',
+        banana: 'Yoshi with a banana hat',
+        crown: 'Yoshi with a crown',
+        marioMoustache: 'Mario\'s moustache',
+        fancyMoustache: 'Fancy moustache',
+        sunglasses: 'Yoshi with sunglasses',
+        fancyGlasses: 'Yoshi with a monocle',
+    },
 }
 
 $(document).ready(function () {
     let color = 'green';
     let accessory = 'none';
+    let moustache = 'none';
+    let hat = 'none';
+    let glasses = 'none';
+    let gloves = 'none';
     let price = 'base';
 
     //Fonction pour indiquer visuellement quel bouton est actif
@@ -81,29 +108,16 @@ $(document).ready(function () {
         $('#'+activeState).removeAttr('id');
         $(button).attr('id', activeState);
     }
-    function noneButton (button, activeState){
-        if ($( ".sunglasses" ).is( ".active-none" ) || $( ".moustache" ).is( ".active-none" )){
-            $('.button-custom-accessory').toggleClass(activeState);
-        }
-        $(button).attr('id', activeState); 
-    }
-    function activeButtonAccessory(button, activeState) {
-            $(button).toggleClass(activeState)
-            $('#'+activeState).removeAttr('id');
-            if ($( ".none" ).is( ".active-none" )){
-            $('.none').toggleClass(activeState);
-        }
-    }
+
     //Fonction qui choisit image et texte à afficher en fonction de la couleur et l'accessoire
     function customYoshi(colorYoshi, accessoryYoshi) {
-        $('#change-image').attr('src', yoshi.image[colorYoshi][accessoryYoshi]);
 
         //activeYoshi = yoshiFactory(customizationElements.base[colorYoshi], customizationElements.hat['raymanHair'], customizationElements.glasses['sunglasses'], customizationElements.mustache['mario'], customizationElements.glove['white']);
         activeYoshi = yoshiFactory(customizationElements.base[colorYoshi]);
 
 
-        $('.title-custom').text(yoshi.titleCard[colorYoshi][accessoryYoshi]);
-        $('.text-custom').text(yoshi.sentence[colorYoshi]);
+        $('.title-custom').text(customizationElements.titleCard[accessoryYoshi]);
+        $('.text-custom').text(customizationElements.sentence[colorYoshi]);
     }
     //Fonction ppur augmenter ou diminuer le prix si ajout ou non d'un accessoire
     function lowerPrice(actualPrice) {
@@ -129,7 +143,7 @@ $(document).ready(function () {
     $('.pink-button').on({
         'click': function () {
             activeButtonColor('.pink-button', 'active');
-            $('#section2').css('background-color','#ffe6e6');
+            $('#section2').css('background-color','#fff3f3');
             color = 'pink';
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(customizationElements.base[color]);
@@ -144,35 +158,124 @@ $(document).ready(function () {
             activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
     });
-    //Accessory buttons on click
-    $('.none').on({
+    $('.purple-button').on({
         'click': function () {
-            noneButton('.none', 'active-none');
-            accessory = 'none';
+            activeButtonColor('.purple-button', 'active');
+            $('#section2').css('background-color','#f2ecf7');
+            color = 'purple';
             customYoshi(color, accessory);
-            lowerPrice(price)
-            price = 'base';
             activeYoshi = yoshiFactory(customizationElements.base[color]);
         }
     });
-    $('.moustache').on({
+    //Accessory buttons on click
+      //Hat buttons
+    $('.noneHat').on({
         'click': function () {
-            activeButtonAccessory('.moustache', 'active-none');
-            accessory = 'moustache';
-            customYoshi(color, accessory);
+            activeButtonColor('.noneHat', 'active-none-hat');
+            hat = 'none';
+            customYoshi(color, hat);
+            lowerPrice(price)
+            price = 'base';
+            activeYoshi = yoshiFactory(customizationElements.base[color], customizationElements.hat['none'], undefined, undefined);
+        }
+    });
+    $('.hatMario').on({
+        'click': function () {
+            activeButtonColor('.hatMario', 'active-none-hat');
+            hat = 'marioHat';
+            customYoshi(color, hat);
             increasedPrice(price)
             price = 'expensive';
-            activeYoshi = yoshiFactory(customizationElements.base[color], customizationElements.hat['marioCap'], undefined, customizationElements.mustache['mario']);
+            activeYoshi = yoshiFactory(customizationElements.base[color], customizationElements.hat['marioCap'], undefined, undefined);
+
+        }
+    });
+    $('.banana').on({
+        'click': function () {
+            activeButtonColor('.banana', 'active-none-hat');
+            hat = 'banana';
+            customYoshi(color, hat);
+            increasedPrice(price)
+            price = 'expensive';
+            activeYoshi = yoshiFactory(customizationElements.base[color], customizationElements.hat['banana'], undefined, undefined);
+
+        }
+    });
+    $('.crown').on({
+        'click': function () {
+            activeButtonColor('.crown', 'active-none-hat');
+            hat = 'crown';
+            customYoshi(color, hat);
+            increasedPrice(price)
+            price = 'expensive';
+            activeYoshi = yoshiFactory(customizationElements.base[color], customizationElements.hat['marioCrown'], undefined, undefined);
+
+        }
+    });
+     //Moustache buttons
+    $('.noneMoustache').on({
+        'click': function () {
+            activeButtonColor('.noneMoustache', 'active-none-moustache');
+            moustache = 'none';
+            customYoshi(color, moustache);
+            lowerPrice(price)
+            price = 'base';
+            activeYoshi = yoshiFactory(customizationElements.base[color], undefined, undefined, customizationElements.mustache['none']);
+        }
+    });
+    $('.moustacheMario').on({
+        'click': function () {
+            activeButtonColor('.moustacheMario', 'active-none-moustache');
+            moustache = 'marioMoustache';
+            customYoshi(color, moustache);
+            increasedPrice(price)
+            price = 'expensive';
+            activeYoshi = yoshiFactory(customizationElements.base[color], undefined, undefined, customizationElements.mustache['mario']);
+
+        }
+    });
+    $('.fancyMoustache').on({
+        'click': function () {
+            activeButtonColor('.fancyMoustache', 'active-none-moustache');
+            moustache = 'fancyMoustache';
+            customYoshi(color, moustache);
+            increasedPrice(price)
+            price = 'expensive';
+            activeYoshi = yoshiFactory(customizationElements.base[color], undefined, undefined, customizationElements.mustache['fancyMoustache']);
+
+        }
+    });
+    //Lunettes buttons
+    $('.noneGlasses').on({
+        'click': function () {
+            activeButtonColor('.noneGlasses', 'active-none-glasses');
+            glasses = 'none';
+            customYoshi(color, glasses);
+            lowerPrice(price)
+            price = 'base';
+            activeYoshi = yoshiFactory(customizationElements.base[color], undefined, customizationElements.glasses['none'], undefined);
         }
     });
     $('.sunglasses').on({
         'click': function () {
-            activeButtonAccessory('.sunglasses', 'active-none');
-            accessory = 'sunglasses';
-            customYoshi(color, accessory);
+            activeButtonColor('.sunglasses', 'active-none-glasses');
+            glasses = 'sunglasses';
+            customYoshi(color, glasses);
             increasedPrice(price)
             price = 'expensive';
             activeYoshi = yoshiFactory(customizationElements.base[color], undefined, customizationElements.glasses['sunglasses'], undefined);
+
+        }
+    });
+    $('.fancyGlasses').on({
+        'click': function () {
+            activeButtonColor('.fancyGlasses', 'active-none-glasses');
+            glasses = 'fancyGlasses';
+            customYoshi(color, glasses);
+            increasedPrice(price)
+            price = 'expensive';
+            activeYoshi = yoshiFactory(customizationElements.base[color], undefined, customizationElements.glasses['fancyGlasses'], undefined);
+
         }
     });
 });
