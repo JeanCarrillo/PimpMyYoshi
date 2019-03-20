@@ -69,7 +69,10 @@
 {
     background-color: #54d1e2;
 }
-
+.purple-button
+{
+    background-color: #9141cc;
+}
 .button-buy:active
 {
     background-color: #ff8f5f;
@@ -82,9 +85,14 @@
 .button-custom-accessory
 {
     border:none;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     border-radius: 10px;
+    width: 100px;
+}
+.button-custom-accessory img
+{
+    width: 100%;
 }
 .button-custom-accessory p
     {
@@ -106,6 +114,30 @@
     border:solid 2px grey;
 }
 .active-none
+{
+    border:solid 2px grey;
+}
+#active-none-hat
+{
+    border:solid 2px grey;
+}
+.active-none-hat
+{
+    border:solid 2px grey;
+}
+#active-none-moustache
+{
+    border:solid 2px grey;
+}
+.active-none-moustache
+{
+    border:solid 2px grey;
+}
+#active-none-glasses
+{
+    border:solid 2px grey;
+}
+.active-none-glasses
 {
     border:solid 2px grey;
 }
@@ -136,6 +168,8 @@
 .offer
 {
     text-align: center;
+    font-size: 0.9em;
+    font-weight: normal;
 }
 .badge-warning
 {
@@ -155,11 +189,21 @@
     }
     h2 
     {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     .custom-container h3 
     {
-        font-size: 1.3em;
+        font-size: 1em;
+    }
+    .zone-prix
+    {
+        display: none;
+    }
+    .button-custom-accessory
+    {
+        padding: 0px;
+        width: 60px;
+
     }
 
 }

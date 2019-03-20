@@ -93,33 +93,73 @@
                 </div>
                 <!-- Zone de customization -->
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-md-8 col-lg-3 order-lg-2 order-sm-1 order-sx-1">
+                    <div class="col-12 col-md-8 col-lg-4 order-lg-2 order-sm-1 order-sx-1">
                         <!-- Choix couleurs -->
-                        <div class="zone-custom text-center pb-lg-5 pb-sm-4 pb-4">
+                        <div class="zone-custom text-center pb-lg-4 pb-sm-3 pb-2">
                             <h3 class="text-center">Choose your color</h3>
                             <ul class="nav justify-content-center">
-                                <li class="nav-item mr-5"><button id="active"
+                                <li class="nav-item mr-lg-5 mr-3"><button id="active"
                                         class="btn green-button button-custom"></button></li>
-                                <li class="nav-item mr-5"><button class="btn pink-button button-custom"></button></li>
-                                <li class="nav-item"><button class="btn blue-button button-custom"></button></li>
+                                <li class="nav-item mr-lg-5 mr-3"><button class="btn pink-button button-custom"></button></li>
+                                <li class="nav-item mr-lg-5 mr-3"><button class="btn blue-button button-custom"></button></li>
+                                <li class="nav-item"><button class="btn purple-button button-custom"></button></li>
                             </ul>
                         </div>
                         <!-- Choix accessoires -->
-                        <div class="zone-custom text-center pb-lg-5 pb-sm-3 pb-2">
-                            <h3 class="text-center">Choose your accessory</h3>
+                        <!-- Choix hat -->
+                        <div class="zone-custom text-center pb-lg-4 pb-sm-3 pb-2">
+                            <h3 class="text-center">Choose your hat</h3>
                             <ul class="nav justify-content-center nav-accessory">
                                 <li class="nav-item mr-2 mr-sm-2 mr-md-5"><button type="button"
-                                        class="btn none btn-light button-custom-accessory" id="active-none"><img
+                                        class="btn noneHat btn-light button-custom-accessory hat" id="active-none-hat"><img
                                             class="img-button" src="assets/images/cross.png"
                                             alt="cross" /><span><br />None</span></button></li>
-                                <li class="nav-item item-sunglasses mr-2 mr-sm-2 mr-md-5"><button type="button"
-                                        class="btn sunglasses btn-light button-custom-accessory"><img class="img-button"
-                                            src="assets/images/lunettes.png"
-                                            alt="Sunglasses" /><span><br />Glasses</span></button></li>
-                                <li class="nav-item item-moustache"><button type="button"
-                                        class="btn moustache btn-light button-custom-accessory"><img class="img-button"
+                                <li class="nav-item item-hat mr-2 mr-sm-2 mr-md-5"><button type="button"
+                                        class="btn hatMario btn-light button-custom-accessory hat"><img class="img-button"
                                             src="assets/images/moustache.png"
-                                            alt="moustache" /><span><br />Mario</span></button></li>
+                                            alt="marioCap" /><span><br />Mario</span></button></li>
+                                 <li class="nav-item item-hat mr-2 mr-sm-2 mr-md-5"><button type="button"
+                                        class="btn banana btn-light button-custom-accessory hat"><img class="img-button"
+                                            src="assets/images/banana.png"
+                                            alt="banana" /><span><br />Banana</span></button></li>
+                                 <li class="nav-item item-hat mr-2 mr-sm-2 mr-md-5"><button type="button"
+                                        class="btn crown btn-light button-custom-accessory hat"><img class="img-button"
+                                            src="assets/images/crown.png"
+                                            alt="crown" /><span><br />Crown</span></button></li>
+                            </ul>
+                        </div>
+                        <!-- Choix moustache -->
+                        <div class="zone-custom text-center pb-lg-4 pb-sm-3 pb-2">
+                            <h3 class="text-center">Choose your moustache</h3>
+                            <ul class="nav justify-content-center nav-accessory">
+                                <li class="nav-item mr-2 mr-sm-2 mr-md-5"><button type="button"
+                                        class="btn noneMoustache btn-light button-custom-accessory moustache" id="active-none-moustache"><img
+                                            class="img-button" src="assets/images/cross.png"
+                                            alt="cross" /><span><br />None</span></button></li>
+                                <li class="nav-item item-moustache mr-2 mr-sm-2 mr-md-5"><button type="button"
+                                        class="btn moustacheMario btn-light button-custom-accessory moustache"><img class="img-button"
+                                            src="assets/images/moustache-mario.png"
+                                            alt="marioMoustache" /><span><br />Mario</span></button></li>
+                                <li class="nav-item item-moustache mr-2 mr-sm-2 mr-md-5"><button type="button"
+                                        class="btn fancyMoustache btn-light button-custom-accessory moustache"><img class="img-button"
+                                            src="assets/images/moustache-fancy.png"
+                                            alt="fancy" /><span><br />Fancy</span></button></li>
+                            </ul>
+                        </div>
+                         <!-- Choix lunettes -->
+                        <div class="zone-custom text-center pb-lg-4 pb-sm-3 pb-2">
+                            <h3 class="text-center">Choose your glasses</h3>
+                            <ul class="nav justify-content-center nav-accessory">
+                                <li class="nav-item mr-2 mr-sm-2 mr-md-5"><button type="button"
+                                        class="btn noneGlasses btn-light button-custom-accessory glasses" id="active-none-glasses"><img
+                                            class="img-button" src="assets/images/cross.png"
+                                            alt="cross" /><span><br />None</span></button></li>
+                                <li class="nav-item item-glasses mr-2 mr-sm-2 mr-md-5"><button type="button" class="btn sunglasses btn-light button-custom-accessory glasses"><img class="img-button"
+                                            src="assets/images/lunettes.png"
+                                            alt="sunglasses" /><span><br />Sunglasses</span></button></li>
+                                <li class="nav-item item-glasses mr-2 mr-sm-2 mr-md-5"><button type="button" class="btn fancyGlasses btn-light button-custom-accessory glasses"><img class="img-button"
+                                            src="assets/images/monocle.png"
+                                            alt="monocle" /><span><br />Fancy</span></button></li>
                             </ul>
                         </div>
                     </div>
@@ -136,10 +176,9 @@
                                 <p class="card-text text-custom">The orignal green Yoshi for purists</p>
                             </div>
                         </div>
-                        <p class="text-center mt-2 zone-prix">Price: <span class="price">30€</span></p>
-                        <p class="offer"><span class="badge-pill badge-warning p-2">20% off</span> if you <a
-                                href="https://www.amazon.fr/Yoshis-Woolly-World-Amiibo-Yoshi/dp/B00VK5P2XO/ref=sr_1_11?s=videogames&ie=UTF8&qid=1551986701&sr=1-11&keywords=amiibo+yoshi+game">buy
-                                it with the game</a></p>
+                        <p class="text-center mt-2 zone-prix">Price: <span class="price">30€</span>
+                        <span class="offer"> | <span class="badge-pill badge-warning p-2">20% off</span> if you <a href="https://www.amazon.fr/Yoshis-Woolly-World-Amiibo-Yoshi/dp/B00VK5P2XO/ref=sr_1_11?s=videogames&ie=UTF8&qid=1551986701&sr=1-11&keywords=amiibo+yoshi+game">buy
+                                it with the game</a></span></p>
                     </div>
                 </div>
                 <!-- Boutons achat -->
@@ -297,7 +336,7 @@
         <!-- Section 5 -->
         <div class="page" id="section5">
             <div class="container-section5 mt-2 pt-2 mt-md-2 pt-md-2">
-                <h2 id="topc">Find the golden yoshi and win 10% of reduction</h2>
+                <h2 id="topc">Find the 3 golden yoshis and win 10% of reduction</h2>
                 <div class="row justify-content-center">
                     <!--debut -->
 
@@ -316,7 +355,7 @@
                     </div>
 
                 </div>
-                <p class="row justify-content-center" id="para"> One chance by day, find the golden yoshi and share it
+                <p class="row justify-content-center" id="para"> One chance by day, find the 3 golden yoshis and share it
                     on
                     twitter for your reward!</p>
                 <div id="tweeter">
