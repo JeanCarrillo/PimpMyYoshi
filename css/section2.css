@@ -42,8 +42,9 @@
 .title-custom
 {
     font-weight: bold;
+    font-size: 
     color: #77706c;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.2em;
     box-shadow: 0 4px 2px -2px #f3ecec;
 }
 .body-custom-yoshi
@@ -103,39 +104,39 @@
 }
 #active
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-hat
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-hat
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-moustache
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-moustache
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-glasses
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-glasses
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .nav-accessory img
 {
