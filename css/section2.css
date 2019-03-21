@@ -8,7 +8,7 @@
 .custom-container h3 
 {
     color: #77706c;
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: bold;
     margin-bottom: 0.7em;
 }
@@ -18,7 +18,7 @@
 {
     background-color: transparent;
     border: transparent;
-    width: 70%;
+    width: 80%;
 }
 
 .card-custom-yoshi img
@@ -85,16 +85,9 @@
 .button-custom-accessory
 {
     border:none;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding: 8px;
     border-radius: 10px;
     width: auto;
-}
-.button-custom-accessory img
-{
-    width: 90%;
 }
 .button-custom-accessory p
     {
@@ -210,11 +203,43 @@
 
 }
 
-@media screen and (max-width: 992px) {
-    .card-custom-yoshi
+@media screen and (max-width: 1200px) {
+    .button-custom-accessory
     {
-        width: 40%;
-    } 
+        border:none;
+        padding: 3px;
+        border-radius: 10px;
+        width: auto;
+    }
+    .button-custom-accessory p
+        {
+            margin:0;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    .button-custom
+    {
+        border:none;
+        padding: 16px;
+    }
+    .nav-accessory img
+    {
+        width: 35px;
+    }
+    .custom-container h2
+    {
+        font-size: 2em;
+ 
+    }
+    .custom-container h3 
+    {
+        font-size: 1.5em;
+ 
+    }
+    .offer
+    {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 576px) {
