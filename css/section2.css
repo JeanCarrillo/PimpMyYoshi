@@ -85,7 +85,8 @@
 .button-custom-accessory
 {
     border:none;
-    padding: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-radius: 10px;
     width: auto;
 }
@@ -201,45 +202,6 @@
 
     }
 
-}
-
-@media screen and (max-width: 1200px) {
-    .button-custom-accessory
-    {
-        border:none;
-        padding: 3px;
-        border-radius: 10px;
-        width: auto;
-    }
-    .button-custom-accessory p
-        {
-            margin:0;
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-    .button-custom
-    {
-        border:none;
-        padding: 16px;
-    }
-    .nav-accessory img
-    {
-        width: 35px;
-    }
-    .custom-container h2
-    {
-        font-size: 2em;
- 
-    }
-    .custom-container h3 
-    {
-        font-size: 1.5em;
- 
-    }
-    .offer
-    {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 576px) {
