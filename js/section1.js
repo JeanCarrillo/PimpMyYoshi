@@ -36,3 +36,25 @@ function changeYoshiImage() {
     customYoshi.setAttribute("src", randomYoshiImageUrl(currentUrl));
 }
 setInterval(changeYoshiImage, 1000)
+
+
+// CANVAS // 
+
+// dependances section2.js : 
+//    animate()
+//    yoshiFactory()
+//    let yoshiShowcase
+
+//  dependances index.js : 
+//     resizecanvasCusto()
+
+canvasShowcase =  document.getElementById('canvasShowcase');
+showcaseCtx = canvasShowcase.getContext('2d');
+let ShowcaseContainer = document.getElementById('ShowcaseContainer');
+
+resizecanvasCusto(); 
+
+// yoshiFactory(section, base, hat, glasses, mustache, glove:)
+yoshiShowcase = yoshiFactory(showcaseCtx, customizationElements.base['blue']);
+
+

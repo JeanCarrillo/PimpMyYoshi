@@ -1,4 +1,7 @@
 var currentSection = 1;
+let canvasShowcase =  document.getElementById('canvasShowcase');
+let showcaseCtx = canvasShowcase.getContext('2d');
+
 
 $(document).ready(function () {
 
@@ -163,3 +166,30 @@ const yoshi = {
         },
     }
 }
+
+
+function resizecanvasCusto() {
+
+    // Section 1 //
+    if( window.innerWidth / 3> 360){
+        canvasShowcase.width = 360;
+    }else{
+        canvasShowcase.width = window.innerWidth / 3; //450
+    }
+    
+    canvasShowcase.height = canvasShowcase.width * 1.50; //600
+
+
+
+    // Section 2 //
+    if( window.innerWidth / 3> 360){
+        canvasCusto.width = 360;
+    }else{
+        canvasCusto.width = window.innerWidth / 3; //450
+    }
+    
+    canvasCusto.height = canvasCusto.width * 1.50; //600
+    console.log("Resizing.." + canvasCusto.width + "x" + canvasCusto.height);
+}
+
+$(window).resize(resizecanvasCusto);
