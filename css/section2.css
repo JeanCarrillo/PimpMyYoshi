@@ -8,7 +8,7 @@
 .custom-container h3 
 {
     color: #77706c;
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: bold;
     margin-bottom: 0.7em;
 }
@@ -42,8 +42,9 @@
 .title-custom
 {
     font-weight: bold;
+    font-size: 
     color: #77706c;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.2em;
     box-shadow: 0 4px 2px -2px #f3ecec;
 }
 .body-custom-yoshi
@@ -85,14 +86,10 @@
 .button-custom-accessory
 {
     border:none;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-radius: 10px;
-    width: 100px;
-}
-.button-custom-accessory img
-{
-    width: 100%;
+    width: auto;
 }
 .button-custom-accessory p
     {
@@ -107,39 +104,39 @@
 }
 #active
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-hat
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-hat
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-moustache
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-moustache
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-glasses
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-glasses
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .nav-accessory img
 {
@@ -206,13 +203,6 @@
 
     }
 
-}
-
-@media screen and (max-width: 992px) {
-    .card-custom-yoshi
-    {
-        width: 40%;
-    } 
 }
 
 @media screen and (max-width: 576px) {
