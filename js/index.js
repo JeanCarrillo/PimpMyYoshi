@@ -94,6 +94,15 @@ function displayPage(n) {
         } else {
             $('.ytplayer').css("visibility", "hidden");
         }
+
+        if (n == 1){
+            //superCool = setInterval(randomYoshiElements, 2900);
+        }
+            
+        if (n == 2){
+            clearInterval(superCool)
+        }
+            
     } else if (n == "loading"){
         $(".page").css("visibility", "hidden"); 
         $("#loading").css("visibility", "visible"); 
