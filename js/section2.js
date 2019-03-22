@@ -160,7 +160,9 @@ $(document).ready(function () {
             activeButtonColor('.green-button', 'active');
             $('#section2').css('background-color', '#e6fff9');
             color = 'green';
+
             accessory = 'green';
+
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(context, customizationElements.base[color]);
         }
@@ -170,7 +172,9 @@ $(document).ready(function () {
             activeButtonColor('.pink-button', 'active');
             $('#section2').css('background-color', '#fff3f3');
             color = 'pink';
+
             accessory = 'pink'
+          
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(context, customizationElements.base[color]);
         }
@@ -180,7 +184,9 @@ $(document).ready(function () {
             activeButtonColor('.blue-button', 'active');
             $('#section2').css('background-color', '#E8F1F8');
             color = 'blue';
+
             accessory = 'blue';
+
             customYoshi(color, accessory);
             activeYoshi = yoshiFactory(context, customizationElements.base[color]);
         }
@@ -248,7 +254,7 @@ $(document).ready(function () {
             customYoshi(color, moustache);
             lowerPrice(price)
             price = 'base';
-            activeYoshi = yoshiFactory(context, customizationElements.base[color], undefined, undefined, customizationElements.mustache['none']);
+            activeYoshi = yoshiFactory(context, customizationElements.base[color], undefi-gregoirened, undefined, customizationElements.mustache['none']);
         }
     });
     $('.moustacheMario').on({
