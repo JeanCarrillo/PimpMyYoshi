@@ -14,25 +14,82 @@ function parallaxIt(e, target, movement) {
     });
 }
 
-function randomYoshiImageUrl(currentUrl) {
-    let yoshiRandomImageUrl = currentUrl
-    while (yoshiRandomImageUrl === currentUrl) {
-        let yoshiColors = Object.keys(yoshi.image)
-        let yoshiRandomColor = yoshiColors[Math.floor(yoshiColors.length * Math.random())]
-        let yoshiAccessories = Object.keys(yoshi.image[yoshiRandomColor])
-        let yoshiAccessoryNone = yoshiAccessories.indexOf("none")
-        if (yoshiAccessoryNone > -1) {
-            yoshiAccessories.splice(yoshiAccessoryNone, 1);
-        }
-        let yoshiRandomAccessory = yoshiAccessories[Math.floor(yoshiAccessories.length * Math.random())]
-        yoshiRandomImageUrl = yoshi.image[yoshiRandomColor][yoshiRandomAccessory]
-    }
-    return(yoshiRandomImageUrl)
+
+// CANVAS // 
+
+// dependances section2.js : 
+//    animate()
+//    yoshiFactory()
+//    let yoshiShowcase
+
+//  dependances index.js : 
+//     resizecanvasCusto()
+
+
+let ShowcaseContainer = document.getElementById('ShowCaseContainer');
+let currentYoshi = [];
+
+
+function showcaseClick() {
+    activeYoshi = yoshiFactory(currentYoshi[0], currentYoshi[1], currentYoshi[2], currentYoshi[3], currentYoshi[4]);
+    displayPage(2);
+    console.log('aaaaaaa')
 }
 
-function changeYoshiImage() {
-    const customYoshi = document.getElementById("customYoshiSection1")
-    let currentUrl = customYoshi.getAttribute("src")
-    customYoshi.setAttribute("src", randomYoshiImageUrl(currentUrl));
+ShowcaseContainer.addEventListener('click', function() {
+    definitive = boutonSelec
+    activeYoshi = yoshiFactory(context, currentYoshi[0], currentYoshi[1], currentYoshi[2], currentYoshi[3], currentYoshi[4]);
+    displayPage(2);
+    console.log('aaaaaaa')
+});
+
+resizecanvasCusto(); 
+
+// yoshiFactory(section, base, hat, glasses, mustache, glove:)
+yoshiShowcase = yoshiFactory(showcaseCtx, customizationElements.base['blue']);
+
+let boutonSelec = [];
+let definitive;
+
+function randomYoshiElements(){
+    boutonSelec = [];
+
+
+    let yoshiColors = Object.values(customizationElements.base)
+    this.rand  = Math.floor(yoshiColors.length * Math.random())   
+    let yoshiRandomColor = yoshiColors[this.rand]
+    console.log(yoshiRandomColor)
+    boutonSelec.push(magik.base[this.rand])
+
+    let yoshiHats = Object.values(customizationElements.hat)
+    this.rand = Math.floor(yoshiHats.length * Math.random());
+    let yoshiRandomHat = yoshiHats[this.rand]
+    boutonSelec.push(magik.hat[this.rand])
+
+
+    let yoshiMustaches = Object.values(customizationElements.mustache)
+    this.rand = Math.floor(yoshiMustaches.length * Math.random());
+    let yoshiRandomMustache = yoshiMustaches[this.rand]
+    boutonSelec.push(magik.mustache[this.rand])
+
+
+    let yoshiGlasses = Object.values(customizationElements.glasses)
+    this.rand = Math.floor(yoshiGlasses.length * Math.random())
+    let yoshiRandomGlasses = yoshiGlasses[this.rand]
+    boutonSelec.push(magik.glasses[this.rand])
+    
+    
+    let yoshiGloves= Object.values(customizationElements.glove)
+    this.rand = Math.floor(yoshiGloves.length * Math.random())
+    let yoshiRandomGloves = yoshiGloves[this.rand]
+    //boutonSelec.push(magik.base[this.rand])
+    
+    
+    console.log(yoshiRandomColor, yoshiRandomHat, yoshiRandomGlasses, yoshiRandomMustache, yoshiRandomGloves)
+    currentYoshi = [yoshiRandomColor, yoshiRandomHat, yoshiRandomGlasses, yoshiRandomMustache, yoshiRandomGloves];
+    
+    
+    yoshiShowcase=yoshiFactory(showcaseCtx, yoshiRandomColor, yoshiRandomHat, yoshiRandomGlasses, yoshiRandomMustache, yoshiRandomGloves, true)
 }
-setInterval(changeYoshiImage, 1000)
+setInterval(randomYoshiElements, 2900)
+
