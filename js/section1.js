@@ -14,25 +14,40 @@ function parallaxIt(e, target, movement) {
     });
 }
 
-function randomYoshiImageUrl(currentUrl) {
-    let yoshiRandomImageUrl = currentUrl
-    while (yoshiRandomImageUrl === currentUrl) {
-        let yoshiColors = Object.keys(yoshi.image)
-        let yoshiRandomColor = yoshiColors[Math.floor(yoshiColors.length * Math.random())]
-        let yoshiAccessories = Object.keys(yoshi.image[yoshiRandomColor])
-        let yoshiAccessoryNone = yoshiAccessories.indexOf("none")
-        if (yoshiAccessoryNone > -1) {
-            yoshiAccessories.splice(yoshiAccessoryNone, 1);
-        }
-        let yoshiRandomAccessory = yoshiAccessories[Math.floor(yoshiAccessories.length * Math.random())]
-        yoshiRandomImageUrl = yoshi.image[yoshiRandomColor][yoshiRandomAccessory]
-    }
-    return(yoshiRandomImageUrl)
-}
 
-function changeYoshiImage() {
-    const customYoshi = document.getElementById("customYoshiSection1")
-    let currentUrl = customYoshi.getAttribute("src")
-    customYoshi.setAttribute("src", randomYoshiImageUrl(currentUrl));
+// CANVAS // 
+
+// dependances section2.js : 
+//    animate()
+//    yoshiFactory()
+//    let yoshiShowcase
+
+//  dependances index.js : 
+//     resizecanvasCusto()
+
+
+let ShowcaseContainer = document.getElementById('ShowcaseContainer');
+
+resizecanvasCusto(); 
+
+// yoshiFactory(section, base, hat, glasses, mustache, glove:)
+yoshiShowcase = yoshiFactory(showcaseCtx, customizationElements.base['blue']);
+
+
+function randomYoshiElements(){
+    let yoshiColors = Object.values(customizationElements.base)
+    let yoshiRandomColor = yoshiColors[Math.floor(yoshiColors.length * Math.random())]
+    console.log(yoshiRandomColor)
+    let yoshiHats = Object.values(customizationElements.hat)
+    let yoshiRandomHat = yoshiHats[Math.floor(yoshiHats.length * Math.random())]
+    let yoshiMustaches = Object.values(customizationElements.mustache)
+    let yoshiRandomMustache = yoshiMustaches[Math.floor(yoshiMustaches.length * Math.random())]
+    let yoshiGlasses = Object.values(customizationElements.glasses)
+    let yoshiRandomGlasses = yoshiGlasses[Math.floor(yoshiGlasses.length * Math.random())]
+    let yoshiGloves= Object.values(customizationElements.glove)
+    let yoshiRandomGloves = yoshiGloves[Math.floor(yoshiGloves.length * Math.random())]
+    console.log(yoshiRandomColor, yoshiRandomHat, yoshiRandomGlasses, yoshiRandomMustache, yoshiRandomGloves)
+    yoshiShowcase=yoshiFactory(showcaseCtx, yoshiRandomColor, yoshiRandomHat, yoshiRandomGlasses, yoshiRandomMustache, yoshiRandomGloves)
 }
-setInterval(changeYoshiImage, 1000)
+setInterval(randomYoshiElements, 2900)
+
