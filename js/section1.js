@@ -25,8 +25,7 @@ function parallaxIt(e, target, movement) {
 //  dependances index.js : 
 //     resizecanvasCusto()
 
-canvasShowcase =  document.getElementById('canvasShowcase');
-showcaseCtx = canvasShowcase.getContext('2d');
+
 let ShowcaseContainer = document.getElementById('ShowcaseContainer');
 
 resizecanvasCusto(); 

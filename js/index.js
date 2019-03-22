@@ -188,7 +188,7 @@ function resizecanvasCusto() {
         canvasCusto.width = window.innerWidth / 3; //450
     }
     
-    canvasCusto.height = canvasCusto.width * 1.50; //600
+    canvasCusto.height = canvasCusto.width * 1.30; //600
     console.log("Resizing.." + canvasCusto.width + "x" + canvasCusto.height);
 }
 
