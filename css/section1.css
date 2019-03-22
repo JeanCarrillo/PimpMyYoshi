@@ -9,7 +9,23 @@
     height: 100%;
     z-index: -10;
 }
+#ShowCaseContainer {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        text-align: left;
+        margin:auto;
+    }
 
+
+#canvasShowcase{
+        z-index: 999;
+        width: 100%;
+        height:100%;
+
+    }
+    
+    
 .logo {
     margin-left: auto;
     margin-right: auto;
@@ -96,7 +112,7 @@
 }
 
 .section1_content img {
-    width: 30%;
+    width: 40%;
     height: auto;
     top: 50vmax;
 }
@@ -143,8 +159,8 @@
 @media screen and (max-width: 767px) {
     .text-slider{
         background-color: transparent;
-        color: white;
     }
+    
     .section1_card,
     .invisible-sm {
         display: none;
