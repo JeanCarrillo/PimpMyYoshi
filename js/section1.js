@@ -48,8 +48,7 @@ setInterval(changeYoshiImage, 1000)
 //  dependances index.js : 
 //     resizecanvasCusto()
 
-canvasShowcase =  document.getElementById('canvasShowcase');
-showcaseCtx = canvasShowcase.getContext('2d');
+
 let ShowcaseContainer = document.getElementById('ShowcaseContainer');
 
 resizecanvasCusto(); 
