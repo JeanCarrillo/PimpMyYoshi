@@ -143,8 +143,8 @@
 @media screen and (max-width: 767px) {
     .text-slider{
         background-color: transparent;
-        color: white;
     }
+    
     .section1_card,
     .invisible-sm {
         display: none;
