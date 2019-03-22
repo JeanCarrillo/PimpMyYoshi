@@ -42,8 +42,9 @@
 .title-custom
 {
     font-weight: bold;
+    font-size: 
     color: #77706c;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.2em;
     box-shadow: 0 4px 2px -2px #f3ecec;
 }
 .body-custom-yoshi
@@ -85,7 +86,8 @@
 .button-custom-accessory
 {
     border:none;
-    padding: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-radius: 10px;
     width: auto;
 }
@@ -102,39 +104,39 @@
 }
 #active
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-hat
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-hat
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-moustache
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-moustache
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 #active-none-glasses
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .active-none-glasses
 {
-    border:solid 2px grey;
+    border:solid 2px black;
 }
 .nav-accessory img
 {
@@ -201,45 +203,6 @@
 
     }
 
-}
-
-@media screen and (max-width: 1200px) {
-    .button-custom-accessory
-    {
-        border:none;
-        padding: 3px;
-        border-radius: 10px;
-        width: auto;
-    }
-    .button-custom-accessory p
-        {
-            margin:0;
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-    .button-custom
-    {
-        border:none;
-        padding: 16px;
-    }
-    .nav-accessory img
-    {
-        width: 35px;
-    }
-    .custom-container h2
-    {
-        font-size: 2em;
- 
-    }
-    .custom-container h3 
-    {
-        font-size: 1.5em;
- 
-    }
-    .offer
-    {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 576px) {
