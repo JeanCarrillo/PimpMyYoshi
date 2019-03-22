@@ -91,5 +91,5 @@ function randomYoshiElements(){
     
     yoshiShowcase=yoshiFactory(showcaseCtx, yoshiRandomColor, yoshiRandomHat, yoshiRandomGlasses, yoshiRandomMustache, yoshiRandomGloves, true)
 }
-setInterval(randomYoshiElements, 2900)
+var superCool = setInterval(randomYoshiElements, 2900);
 

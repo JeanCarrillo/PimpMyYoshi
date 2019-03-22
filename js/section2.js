@@ -254,7 +254,7 @@ $(document).ready(function () {
             customYoshi(color, moustache);
             lowerPrice(price)
             price = 'base';
-            activeYoshi = yoshiFactory(context, customizationElements.base[color], undefi-gregoirened, undefined, customizationElements.mustache['none']);
+            activeYoshi = yoshiFactory(context, customizationElements.base[color], undefined, undefined, customizationElements.mustache['none']);
         }
     });
     $('.moustacheMario').on({
