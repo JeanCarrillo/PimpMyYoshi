@@ -17,7 +17,7 @@ class Yoshi {
 
     draw() {
 
-        console.log(this.section);
+        //console.log(this.section);
         //animation
         if (this.y < 25) {
             this.dy = -this.dy
