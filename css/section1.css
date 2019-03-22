@@ -9,23 +9,26 @@
     height: 100%;
     z-index: -10;
 }
-#ShowCaseContainer {
-        width: 100%;
-        height: 100%;
-        top: 0;
-        text-align: left;
-        margin:auto;
-    }
 
+#ShowCaseContainer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: left;
+    margin: auto;
+    z-index: 9999;
+}
 
-#canvasShowcase{
-        z-index: 999;
-        width: 100%;
-        height:100%;
+#canvasShowcase {
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
 
-    }
-    
-    
+#foreground {
+    pointer-events: none;
+}
+
 .logo {
     margin-left: auto;
     margin-right: auto;
@@ -100,10 +103,10 @@
     font-size: 1.3em;
     color: black;
 }
-.text-slider
-{
-    background-color: rgba(175,229,241,0.7);
-    border-radius:20px;
+
+.text-slider {
+    background-color: rgba(175, 229, 241, 0.7);
+    border-radius: 20px;
     padding: 1em;
 }
 
@@ -131,8 +134,8 @@
 }
 
 .section1_card .card {
-    background-color: rgba(255,255,255,0.2);
-    border-radius:20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
     border: solid 1px #a59e9e;
     padding-top: 6px;
     z-index: 30000;
@@ -146,30 +149,28 @@
 .section1_card .card-body {
     color: black;
     border-radius: 0px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 0 0 20px 20px;
 }
+
 .card-slider {
     text-align: center;
     font-size: 1.6em;
     font-weight: bold;
 }
 
-
 @media screen and (max-width: 767px) {
-    .text-slider{
+    .text-slider {
         background-color: transparent;
     }
-    
-    .section1_card,
-    .invisible-sm {
+    .section1_card, .invisible-sm {
         display: none;
     }
 }
 
 /*   TODO : TABLETTES  */
-@media screen and (width: 1024px) and (height: 1366px) {
 
+@media screen and (width: 1024px) and (height: 1366px) {
     .row.section1_content {
         min-height: 50vh;
         align-items: center;
@@ -180,7 +181,6 @@
     from {
         background-position: 0 0;
     }
-
     to {
         background-position: -400px 0;
     }
@@ -201,12 +201,10 @@
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-
     50% {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
-
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -218,12 +216,10 @@
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-
     50% {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
-
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);

@@ -105,6 +105,16 @@ const customizationElements = {
     },
 }
 
+const magik = {
+    base : ['.green-button', '.pink-button', '.blue-button', '.purple-button'],
+
+    hat : ['.noneHat', '.hatMario', '.banana', '.crown', ],
+
+    mustache : ['.noneMoustache', '.moustacheMario', '.fancyMoustache'],
+
+    glasses : ['.noneGlasses', '.sunglasses', '.fancyGlasses']
+}
+
 
 $(document).ready(function () {
     let color = 'green';
@@ -370,13 +380,15 @@ animate();
 
 var select = 0;
 
-function yoshiFactory(section, base, hat, glasses, mustache, glove) {
+function yoshiFactory(section, base, hat, glasses, mustache, glove, demo) {
     this.base = new Image();
     this.base.src = base;
+    this.og = select
     if (hat) {
         this.hat = new Image();
         this.hat.src = hat;
         select += 1;
+        //activeButtonColor('.green-button', 'active');
     }
     if (hat === 'assets/images/Customization/none.png') {
         select = select > 0 ? select -= 2 : select
@@ -412,9 +424,14 @@ function yoshiFactory(section, base, hat, glasses, mustache, glove) {
     }
 
 
-    //console.log('sections = ' + select)
+    console.log('sections = ' + select)
 
-    updatePrice(select < 0 ? select = 0 : select);
+    if (!demo){
+        updatePrice(select < 0 ? select = 0 : select);
+    } else {
+        select = this.og
+    }
+        
 
     //console.log('sections = ' + select)
 
